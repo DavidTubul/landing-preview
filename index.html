@@ -147,16 +147,20 @@ nav a.on{box-shadow:0 1.5px 0 var(--ink)}
 .about .photo:has(img){padding:0}
 @media(max-width:759px){#about{padding-top:0}.about .photo{width:100vw;max-width:none;margin-inline:-20px;border-radius:0}}
 .about .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.storyvid{display:grid;gap:26px;align-items:center;margin-top:50px}
-@media(min-width:760px){.storyvid{grid-template-columns:auto 1fr;gap:48px;justify-content:center}}
-.storyvid .reel{width:min(260px,70vw);margin:0 auto}
-blockquote.story{font-family:var(--serif);border-inline-start:3px solid var(--line);padding-inline-start:20px}
-blockquote.story .qh{font-family:var(--sans);font-size:13px;letter-spacing:.2em;color:var(--soft);margin-bottom:12px}
-blockquote.story ul{list-style:none}
-blockquote.story li{font-size:20px;line-height:1.55;color:var(--ink);padding:9px 0}
 .about h2.big{font-family:var(--sans);font-size:clamp(44px,11vw,68px);font-weight:500;letter-spacing:-.01em;margin-bottom:18px}
 .about p{color:var(--mauve);margin-bottom:14px}
 .about p.hi{font-size:22px;font-weight:400;color:var(--ink);line-height:1.5}
+.story-card{background:var(--blush);border-radius:28px;padding:34px 20px 30px;margin-top:56px}
+.story-h{font-family:var(--sans);font-weight:500;font-size:clamp(26px,6.6vw,36px);text-align:center;margin-bottom:26px}
+.story-grid{display:grid;gap:26px;align-items:center}
+@media(min-width:760px){.story-card{padding:44px 48px}.story-grid{grid-template-columns:300px 1fr;gap:44px}}
+.story-vid{margin:0 auto;width:min(280px,74vw)}
+.story-vid .reel{border-radius:22px;box-shadow:0 14px 34px rgba(74,47,44,.22)}
+.story-vid figcaption{text-align:center;font-size:14px;color:var(--mauve);margin-top:12px}
+.story-q{list-style:none;display:grid;gap:12px}
+.story-q li{position:relative;background:var(--card);border-radius:18px;padding:16px 20px 16px 20px;padding-inline-start:48px;font-size:17px;line-height:1.6;color:var(--ink)}
+.story-q li::before{content:"\201D";position:absolute;inset-inline-start:16px;top:6px;font-family:'Playfair Display',serif;font-size:44px;line-height:1;color:var(--soft);opacity:.7}
+html[lang=en] .story-q li::before{content:"\201C"}
 .about p.belief{font-family:var(--serif);font-size:20px;color:var(--ink);border-inline-start:3px solid var(--line);padding-inline-start:16px;margin-top:22px;line-height:1.55}
 .en-title{font-family:'Playfair Display',serif}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
@@ -385,12 +389,17 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
       <p class="belief"><span class="he">"מבחינתי, תוכן טוב לא מתחיל בטרנד.<br>הוא מתחיל בלהבין מה אנחנו רוצים שאנשים ירגישו כשהם פוגשים את המותג."</span><span class="en">"For me, good content doesn't start with a trend.<br>It starts with understanding what we want people to feel when they meet the brand."</span></p>
     </div>
   </div>
-  <div class="wrap storyvid">
-    <div class="reel"><video aria-label="גאיה מספרת על הדרך שלה" src="assets/gaya-story.mp4" poster="assets/gaya-story.jpg" playsinline loop preload="none"></video><div class="play"><i></i></div></div>
-    <blockquote class="story">
-      <span class="he"><p class="qh">הסיפור שלי, בקצרה</p><ul><li>"לפני כמה שנים לא הייתי מאמינה שאהיה מנהלת סושיאל."</li><li>"הבנתי שזה משהו שמושך אותי ושאני אוהבת, והחלטתי לעבוד באופן עצמאי עם עסקים."</li><li>"ראיתי שזה עובד: תוכן שעוצר אנשים מביא יותר לקוחות, יותר חשיפה ובסוף יותר כסף."</li><li>"אם אתם רוצים מישהי שבאמת יודעת לעשות את העבודה, פנו אליי."</li></ul></span>
-      <span class="en"><p class="qh">My story, in short</p><ul><li>"A few years ago I never thought I'd become a social media manager."</li><li>"I realized it pulls me in and that I love it, so I decided to work independently with businesses."</li><li>"I saw that it works: content that stops people brings more customers, more exposure and, in the end, more revenue."</li><li>"If you want someone who truly knows how to do the job, reach out to me."</li></ul></span>
-    </blockquote>
+  <div class="wrap">
+    <div class="story-card">
+      <h3 class="story-h"><span class="he">הסיפור שלי, בקצרה</span><span class="en">My story, in short</span></h3>
+      <div class="story-grid">
+        <figure class="story-vid">
+          <div class="reel"><video aria-label="גאיה מספרת על הדרך שלה" src="assets/gaya-story.mp4" poster="assets/gaya-story.jpg" playsinline preload="none"></video><div class="play"><i></i></div></div>
+          <figcaption><span class="he">🔊 לחצו לצפייה, 53 שניות</span><span class="en">🔊 Tap to watch, 53 seconds</span></figcaption>
+        </figure>
+        <ul class="story-q"><li><span class="he">לפני כמה שנים לא הייתי מאמינה שאהיה מנהלת סושיאל.</span><span class="en">A few years ago I never thought I'd become a social media manager.</span></li><li><span class="he">הבנתי שזה משהו שמושך אותי ושאני אוהבת, והחלטתי לעבוד באופן עצמאי עם עסקים.</span><span class="en">I realized it pulls me in and that I love it, so I decided to work independently with businesses.</span></li><li><span class="he">ראיתי שזה עובד: תוכן שעוצר אנשים מביא יותר לקוחות, יותר חשיפה ובסוף יותר כסף.</span><span class="en">I saw that it works: content that stops people brings more customers, more exposure and, in the end, more revenue.</span></li><li><span class="he">אם אתם רוצים מישהי שבאמת יודעת לעשות את העבודה, פנו אליי.</span><span class="en">If you want someone who truly knows how to do the job, reach out to me.</span></li></ul>
+      </div>
+    </div>
   </div>
 </section>
 
