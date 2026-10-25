@@ -120,7 +120,8 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 header .mark img{height:46px;width:auto}
 nav{display:none;gap:26px;font-size:15px}
 nav a{text-decoration:none;color:var(--mauve)}
-nav a:hover{color:var(--ink)}
+nav a:hover,nav a.on{color:var(--ink)}
+nav a.on{box-shadow:0 1.5px 0 var(--ink)}
 .hd-end{display:flex;align-items:center;gap:10px}
 .lang{background:none;border:1px solid var(--line);color:var(--mauve);border-radius:999px;padding:7px 13px;font:400 13px var(--sans);letter-spacing:.06em;cursor:pointer}
 .lang:hover{background:var(--blush)}
@@ -264,8 +265,8 @@ body.menu .drawer-bg{opacity:1;pointer-events:auto}
 /* testimonials */
 .t{margin-top:34px;display:grid;gap:18px}
 @media(min-width:760px){.t{grid-template-columns:1fr 1fr}}
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 26px}
-.tcard blockquote{font-family:var(--serif);font-size:20px;line-height:1.6;margin-bottom:18px}
+.tcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 26px}
+.tcard blockquote{font-family:var(--serif);font-size:20px;line-height:1.6;margin-bottom:18px;flex:1}
 .tcard cite{display:block;font-style:normal;font-size:14px;color:var(--soft);margin-bottom:12px}
 audio{width:100%;height:40px}
 
@@ -374,7 +375,7 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
       <p class="hi"><span class="he">היי, אני גאיה, מנהלת סושיאל ויוצרת תוכן.</span><span class="en">Hi, I'm Gaya, a social media manager and content creator.</span></p>
       <p><span class="he">אני עובדת עם עסקים שרוצים שהסושיאל שלהם ירגיש כמו המשך אמיתי של המותג שלהם, ולא פשוט עוד עמוד שמעלה פוסטים.</span><span class="en">I work with businesses that want their social media to feel like a true extension of their brand, not just another page that posts.</span></p>
       <p><span class="he">אני משלבת בין אסטרטגיה, קריאייטיב, צילום, עריכה והבנה של מה גורם לאנשים לעצור, להסתכל ולהתחבר, כדי ליצור נוכחות שהיא גם אסתטית וגם עובדת עבור העסק.</span><span class="en">I combine strategy, creative, shooting, editing and an understanding of what makes people stop, look and connect, to build a presence that is both beautiful and works for the business.</span></p>
-      <p class="belief"><span class="he">מבחינתי, תוכן טוב לא מתחיל בטרנד.<br>הוא מתחיל בלהבין מה אנחנו רוצים שאנשים ירגישו כשהם פוגשים את המותג.</span><span class="en">For me, good content doesn't start with a trend.<br>It starts with understanding what we want people to feel when they meet the brand.</span></p>
+      <p class="belief"><span class="he">"מבחינתי, תוכן טוב לא מתחיל בטרנד.<br>הוא מתחיל בלהבין מה אנחנו רוצים שאנשים ירגישו כשהם פוגשים את המותג."</span><span class="en">"For me, good content doesn't start with a trend.<br>It starts with understanding what we want people to feel when they meet the brand."</span></p>
     </div>
   </div>
 </section>
@@ -551,7 +552,7 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
 <section>
   <div class="wrap">
     <p class="eyebrow"><span class="he">מה אומרים עליי</span><span class="en">Kind words</span></p>
-    <h2><span class="he">בקול של לקוחה</span><span class="en">In a client's own voice</span></h2>
+    <h2><span class="he">לקוחות ממליצים</span><span class="en">Clients recommend</span></h2>
     <div class="t">
       <div class="tcard">
         <blockquote><span class="he">"אני סומכת עלייך, אני יודעת שהמותג שלי בידיים טובות. את באה עם המון רצון טוב, באמת אכפת לך, ומנסה לצאת מהקופסה ולעשות משהו מיוחד. אני בטוחה שתצליחי."</span><span class="en">"I trust you, I know my brand is in good hands. You come with so much goodwill, you truly care, and you try to think outside the box and do something special."</span></blockquote>
@@ -648,6 +649,17 @@ vbox.addEventListener('click',function(e){if(e.target===vbox)document.getElement
 addEventListener('popstate',vshut);
 addEventListener('keydown',function(e){if(e.key==='Escape'){if(vbox.classList.contains('open'))document.getElementById('vclose').click();document.body.classList.remove('menu')}});
 
+(function(){
+  var links=[].slice.call(document.querySelectorAll('header nav a')),map={shoots:'packages',results:'work',faq:'work'};
+  var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))});
+  function spy(){
+    var y=scrollY+120,cur=null;
+    [].slice.call(document.querySelectorAll('main section[id], section[id]')).forEach(function(sec){if(sec.offsetTop<=y)cur=sec.id});
+    if(cur&&map[cur])cur=map[cur];
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+  }
+  addEventListener('scroll',spy,{passive:true});spy();
+})();
 document.getElementById('burger').addEventListener('click',function(){document.body.classList.add('menu')});
 document.getElementById('drawer-bg').addEventListener('click',function(){document.body.classList.remove('menu')});
 document.querySelectorAll('#drawer a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu')})});
