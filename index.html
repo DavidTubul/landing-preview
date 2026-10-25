@@ -4,15 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Gaya M Social | ניהול סושיאל עם מחשבה מאחורי כל תוכן</title>
-<meta name="description" content="GM social media management: אסטרטגיה, תוכן, עיצוב וקידום ממומן לעסקים באזור המרכז והדרום. תקבעו שיחת היכרות.">
-<meta property="og:title" content="Gaya M Social | ניהול סושיאל עם מחשבה מאחורי כל תוכן">
-<meta property="og:description" content="אסטרטגיה, תוכן, עיצוב וקידום ממומן, כדי שתוכלו להתרכז בעסק. תקבעו שיחת היכרות.">
+<title>Gaya M Social | Make your brand unforgettable</title>
+<meta name="description" content="GM social media management: אסטרטגיה מדויקת, תוכן יצירתי ושפה ויזואלית שמרגישה נכונה לעסק. ניהול סושיאל לעסקים.">
+<meta property="og:title" content="Gaya M Social | Make your brand unforgettable">
+<meta property="og:description" content="אני עוזרת לעסקים להפוך את הנוכחות שלהם ברשת למותג שאנשים עוצרים בשבילו.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/logo-dark.png">
+<meta property="og:image" content="assets/favicon-512.png">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#F8ECE9">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Heebo:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#F8ECE9;        /* ורוד אבקתי בהיר */
@@ -22,147 +27,212 @@
   --mauve:#6B4540;
   --soft:#8A6B66;
   --line:#E3C6C0;
-  --serif:'Frank Ruhl Libre',serif;
+  --serif:'Frank Ruhl Libre','Playfair Display',serif;
   --sans:'Heebo',sans-serif;
 }
+html[lang=en]{--serif:'Playfair Display','Frank Ruhl Libre',serif}
+html[lang=he] .en,html[lang=en] .he{display:none!important}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);font-weight:300;background:var(--bg);color:var(--ink);line-height:1.75;font-size:17px;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:300;background:var(--bg);color:var(--ink);line-height:1.75;font-size:17px;-webkit-text-size-adjust:100%;overflow-x:hidden}
 img,video{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.2;letter-spacing:-.01em}
-h2{font-size:clamp(30px,6vw,46px);margin-bottom:14px}
+h2{font-size:clamp(32px,7vw,48px);margin-bottom:14px}
 h3{font-size:22px;margin-bottom:6px}
-.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-bottom:14px;font-weight:400}
-.lead{color:var(--mauve);max-width:620px}
-section{padding:76px 0}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-bottom:12px;font-weight:400}
+.lead{color:var(--mauve);max-width:640px}
+section{padding:72px 0}
+.alt{background:var(--card)}
+.blush{background:var(--blush)}
 
-/* header */
-header{position:sticky;top:0;z-index:20;background:rgba(248,236,233,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-header img{height:42px;width:auto}
-nav{display:none;gap:28px;font-size:15px}
-nav a{text-decoration:none;color:var(--mauve)}
-nav a:hover{color:var(--ink)}
-.btn{display:inline-block;background:var(--ink);color:var(--card);text-decoration:none;padding:15px 30px;border-radius:999px;font-size:16px;font-weight:400;border:1px solid var(--ink);cursor:pointer;font-family:var(--sans);transition:background .2s,color .2s}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--ink);color:var(--card);text-decoration:none;padding:15px 28px;border-radius:999px;font-size:16px;font-weight:400;border:1px solid var(--ink);cursor:pointer;font-family:var(--sans);transition:background .2s,color .2s}
 .btn:hover{background:var(--mauve)}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn.ghost:hover{background:var(--blush)}
-.btn.small{padding:10px 20px;font-size:14px}
-@media(min-width:760px){nav{display:flex}}
+.btn.small{padding:9px 16px;font-size:14px}
+.btn svg{width:19px;height:19px;flex:none;fill:currentColor}
+.btn.block{width:100%}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(248,236,233,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:72px}
+header .mark img{height:46px;width:auto}
+nav{display:none;gap:26px;font-size:15px}
+nav a{text-decoration:none;color:var(--mauve)}
+nav a:hover{color:var(--ink)}
+.hd-end{display:flex;align-items:center;gap:10px}
+.lang{background:none;border:1px solid var(--line);color:var(--mauve);border-radius:999px;padding:7px 13px;font:400 13px var(--sans);letter-spacing:.06em;cursor:pointer}
+.lang:hover{background:var(--blush)}
+@media(min-width:860px){nav{display:flex}}
 
 /* hero */
-.hero{padding:70px 0 84px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#FBF3F0 0%,var(--bg) 70%)}
-.hero .logo{width:min(250px,60%);margin:0 auto 34px}
-.hero h1{font-size:clamp(40px,10vw,84px);margin-bottom:22px}
-.hero h1 em{font-style:normal;color:var(--soft)}
-.hero p{max-width:560px;margin:0 auto 34px;color:var(--mauve);font-size:18px}
-.hero .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.hero .sub{margin-top:22px;font-size:14px;color:var(--soft)}
+.hero{padding:56px 0 76px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#FBF3F0 0%,var(--bg) 70%)}
+.hero .logo{width:min(400px,86%);margin:0 auto}
+.tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(26px,6.4vw,44px);color:var(--ink);margin-top:26px;line-height:1.25}
+.tagline-he{font-family:'Frank Ruhl Libre',serif;font-size:clamp(19px,4.4vw,24px);color:var(--soft);margin-top:8px}
+.hero .intro{max-width:600px;margin:30px auto 34px;color:var(--mauve);font-size:18.5px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* need */
-.need{background:var(--card);text-align:center}
-.need p{max-width:660px;margin:0 auto 14px;color:var(--mauve);font-size:19px}
-.need .quote{font-family:var(--serif);font-size:clamp(24px,4.6vw,34px);color:var(--ink);margin-bottom:22px}
+/* about */
+.about{display:grid;gap:30px;align-items:center}
+@media(min-width:760px){.about{grid-template-columns:5fr 6fr;gap:56px}}
+.about .photo{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,var(--blush),#E6C2BB);display:grid;place-items:center;color:var(--mauve);text-align:center;padding:24px;font-size:15px;overflow:hidden;max-width:420px;width:100%;margin:0 auto}
+.about .photo:has(img){padding:0}
+.about .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.about h2.big{font-size:clamp(46px,12vw,78px);font-weight:700;margin-bottom:18px}
+.about p{color:var(--mauve);margin-bottom:14px}
+.about p.hi{font-family:var(--serif);font-size:24px;color:var(--ink);line-height:1.4}
+.about p.belief{font-family:var(--serif);font-size:20px;color:var(--ink);border-inline-start:3px solid var(--line);padding-inline-start:16px;margin-top:22px;line-height:1.55}
+.en-title{font-family:'Playfair Display',serif}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{background:rgba(255,248,245,.75);color:var(--mauve);font-size:11.5px;letter-spacing:.12em;padding:6px 14px;border-radius:999px;direction:ltr}
+.card .n{direction:ltr;text-align:start}
+html[lang=he] .card .n{text-align:right}
+.steps{display:grid;gap:14px;margin-top:34px;counter-reset:s}
+@media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 22px;position:relative}
+.step .n{font-family:'Playfair Display',serif;font-size:34px;color:var(--line);line-height:1}
+.step h3{font-family:'Playfair Display',serif;font-size:19px;letter-spacing:.14em;margin:10px 0 6px}
+.step p{color:var(--mauve);font-size:15px}
 
-/* services */
-.grid{display:grid;gap:18px;margin-top:38px}
-@media(min-width:680px){.grid.g3{grid-template-columns:repeat(3,1fr)}.grid.g2{grid-template-columns:repeat(2,1fr)}}
+/* approach */
+.grid{display:grid;gap:18px;margin-top:36px}
+@media(min-width:700px){.grid.g3{grid-template-columns:repeat(3,1fr)}.grid.g2{grid-template-columns:repeat(2,1fr)}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 26px}
+.blush .card{background:rgba(255,248,245,.75);border-color:transparent}
 .card .n{font-family:var(--serif);font-size:15px;color:var(--soft);margin-bottom:10px;letter-spacing:.1em}
 .card p{color:var(--mauve);font-size:15.5px}
-.pkg{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 28px}
-.pkg.dark{background:var(--ink);color:var(--card);border-color:var(--ink)}
-.pkg.dark li{color:#F0DAD5}
-.pkg ul{list-style:none;margin-top:16px}
-.pkg li{padding:7px 0;border-top:1px solid rgba(0,0,0,.08);font-size:15.5px;color:var(--mauve)}
-.pkg.dark li{border-top-color:rgba(255,255,255,.14)}
-.pkg li:first-child{border-top:0}
-.note{margin-top:22px;font-size:14.5px;color:var(--soft)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.chips span{border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:999px;font-size:14.5px;color:var(--mauve)}
 
-/* why */
-.why{background:var(--blush)}
-.why .lead{color:var(--ink)}
-.why .card{background:rgba(255,248,245,.7);border-color:transparent}
+/* packages */
+.pkg{background:var(--card);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(74,47,44,.08)}
+.pkg-hd{background:var(--mauve);color:var(--card);text-align:center;padding:26px 20px 22px}
+.pkg-hd h3{font-size:28px;margin:0}
+.pkg-hd small{display:block;font-size:14px;color:#EAD3CE;margin-top:4px}
+.pkg.top .pkg-hd{background:var(--ink)}
+.badge{display:inline-block;background:var(--blush);color:var(--ink);font-size:12.5px;padding:3px 12px;border-radius:999px;margin-bottom:10px}
+.pkg ul{list-style:none;padding:22px 26px 6px;flex:1}
+.pkg li{position:relative;padding:7px 0;padding-inline-start:22px;font-size:15.5px;color:var(--mauve)}
+.pkg li::before{content:"";position:absolute;inset-inline-start:2px;top:17px;width:7px;height:7px;border-radius:50%;background:var(--soft)}
+.pkg li b{font-weight:500;color:var(--ink)}
+.pkg .pkg-ft{padding:16px 0 26px;border-top:1px solid var(--line);margin:0 26px;text-align:center}
+.pkg .pkg-ft p{font-size:13.5px;color:var(--soft);margin-bottom:16px}
+.note{margin-top:22px;font-size:14.5px;color:var(--soft);text-align:center}
+.box{background:#E8CFCA;border-radius:20px;padding:22px 24px;text-align:center;margin-top:26px;color:var(--ink);font-size:15.5px}
+.box b{font-weight:500}
 
-/* results */
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px;max-width:640px}
-.ba figure{position:relative}
-.ba img{border-radius:18px;border:1px solid var(--line);width:100%}
-.ba figcaption{position:absolute;top:10px;inset-inline-start:10px;background:var(--ink);color:var(--card);font-size:13px;padding:4px 14px;border-radius:999px}
-.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px}
-.stats b{font-family:var(--serif);font-weight:400;font-size:40px;display:block;line-height:1.1}
-.stats span{font-size:14px;color:var(--soft)}
+/* shoots */
+.shoot ul{list-style:none;margin-top:14px}
+.shoot li{position:relative;padding:6px 0;padding-inline-start:22px;color:var(--mauve);font-size:15.5px}
+.shoot li::before{content:"";position:absolute;inset-inline-start:2px;top:16px;width:7px;height:7px;border-radius:50%;background:var(--soft)}
+.shoot .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.shoot .meta span{background:var(--blush);color:var(--ink);font-size:13.5px;padding:4px 12px;border-radius:999px}
+
+/* extras */
+.extras{display:grid;gap:12px;margin-top:34px}
+@media(min-width:700px){.extras{grid-template-columns:1fr 1fr}}
+.extra{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 22px}
+.extra h3{font-size:19px;margin-bottom:2px}
+.extra p{font-size:14.5px;color:var(--soft)}
 
 /* reels */
-.reels{background:var(--card)}
-.reelgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
-.reel{position:relative;border-radius:18px;overflow:hidden;background:var(--blush);aspect-ratio:9/16;cursor:pointer}
+.reelgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.reel{position:relative;border-radius:16px;overflow:hidden;background:var(--blush);aspect-ratio:9/16;cursor:pointer}
 .reel video{width:100%;height:100%;object-fit:cover}
 .reel .play{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;transition:opacity .2s}
-.reel .play i{width:52px;height:52px;border-radius:50%;background:rgba(255,248,245,.9);display:grid;place-items:center}
-.reel .play i::after{content:"";border-inline-start:14px solid var(--ink);border-block:9px solid transparent;margin-inline-start:-4px;transform:scaleX(-1)}
+.reel .play i{width:50px;height:50px;border-radius:50%;background:rgba(255,248,245,.9);display:grid;place-items:center}
+.reel .play i::after{content:"";border-left:14px solid var(--ink);border-block:9px solid transparent;margin-left:4px}
 .reel.on .play{opacity:0}
-.center{text-align:center;margin-top:34px}
+.center{text-align:center;margin-top:30px}
+
+/* results */
+.compare{display:grid;gap:14px;margin-top:34px}
+@media(min-width:760px){.compare{grid-template-columns:repeat(3,1fr)}}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 24px 22px}
+.stat .k{font-size:14px;color:var(--soft);margin-bottom:6px}
+.stat .row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.stat .now{font-family:var(--serif);font-size:44px;line-height:1.1;color:var(--ink)}
+.stat .up{background:var(--ink);color:var(--card);font-size:14px;padding:3px 12px;border-radius:999px;white-space:nowrap}
+.bars{margin-top:16px;display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:52px 1fr;align-items:center;gap:10px;font-size:13px;color:var(--soft)}
+.bar div{height:10px;border-radius:99px;background:var(--line)}
+.bar.after div{background:var(--mauve)}
+.changes{margin-top:26px;display:grid;gap:12px}
+@media(min-width:760px){.changes{grid-template-columns:1fr 1fr}}
+.change{background:rgba(255,248,245,.75);border-radius:18px;padding:18px 22px}
+.change b{font-weight:500;display:block;margin-bottom:2px}
+.change span{color:var(--mauve);font-size:15px}
+details.shots{margin-top:22px;text-align:center}
+details.shots summary{cursor:pointer;color:var(--mauve);font-size:15px;text-decoration:underline;list-style:none}
+details.shots summary::-webkit-details-marker{display:none}
+.shotgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:18px auto 0}
+.shotgrid figure{position:relative}
+.shotgrid img{border-radius:14px;border:1px solid var(--line)}
+.shotgrid figcaption{position:absolute;top:8px;inset-inline-start:8px;background:var(--ink);color:var(--card);font-size:12.5px;padding:3px 12px;border-radius:999px}
 
 /* testimonials */
-.t{margin-top:36px;display:grid;gap:18px}
+.t{margin-top:34px;display:grid;gap:18px}
 @media(min-width:760px){.t{grid-template-columns:1fr 1fr}}
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 28px}
-.tcard blockquote{font-family:var(--serif);font-size:21px;line-height:1.55;margin-bottom:20px}
-.tcard cite{display:block;font-style:normal;font-size:14px;color:var(--soft);margin-bottom:14px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 26px}
+.tcard blockquote{font-family:var(--serif);font-size:20px;line-height:1.6;margin-bottom:18px}
+.tcard cite{display:block;font-style:normal;font-size:14px;color:var(--soft);margin-bottom:12px}
 audio{width:100%;height:40px}
 
 /* faq */
-details{border-bottom:1px solid var(--line);padding:22px 0}
-details:first-of-type{border-top:1px solid var(--line);margin-top:34px}
-summary{cursor:pointer;font-family:var(--serif);font-size:21px;list-style:none;display:flex;justify-content:space-between;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:26px;line-height:1;color:var(--soft)}
-details[open] summary::after{content:"–"}
-details p{margin-top:12px;color:var(--mauve);max-width:700px}
+details.q{border-bottom:1px solid var(--line);padding:20px 0}
+details.q:first-of-type{border-top:1px solid var(--line);margin-top:32px}
+details.q summary{cursor:pointer;font-family:var(--serif);font-size:21px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{content:"+";font-size:26px;line-height:1;color:var(--soft)}
+details.q[open] summary::after{content:"–"}
+details.q p{margin-top:12px;color:var(--mauve);max-width:720px}
 
-/* cta */
+/* contact */
 .cta{background:var(--ink);color:var(--card);text-align:center}
-.cta h2{margin-bottom:12px}
+.cta .eyebrow{color:#d8bdb7}
 .cta .lead{color:#E9D2CD;margin:0 auto 30px}
 .cta .btn{background:var(--blush);color:var(--ink);border-color:var(--blush)}
 .cta .btn:hover{background:var(--card)}
 .cta .btn.ghost{background:transparent;color:var(--card);border-color:#9b7771}
 .cta .btn.ghost:hover{background:rgba(255,255,255,.08)}
-.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-form{max-width:440px;margin:42px auto 0;display:grid;gap:12px;text-align:start}
-form .t2{font-family:var(--serif);font-size:22px;text-align:center;margin-bottom:4px}
-input,textarea{width:100%;padding:14px 18px;border-radius:14px;border:1px solid #9b7771;background:rgba(255,255,255,.06);color:var(--card);font-family:var(--sans);font-size:16px}
-input::placeholder,textarea::placeholder{color:#c9aca6}
-input:focus,textarea:focus{outline:2px solid var(--blush);outline-offset:1px}
-form .btn{width:100%}
 
-footer{background:var(--ink);color:#d8bdb7;padding:34px 0 90px;font-size:14px;border-top:1px solid #6b4a45;text-align:center}
-footer img{height:56px;width:auto;margin:0 auto 14px;filter:invert(1) sepia(.2) saturate(.6) brightness(.95)}
-footer a{margin:0 10px}
+footer{background:var(--ink);color:#d8bdb7;padding:44px 0 100px;font-size:14px;border-top:1px solid #6b4a45;text-align:center}
+footer .fmark{width:150px;margin:0 auto}
+footer .fline{font-size:11.5px;letter-spacing:.42em;color:#EAD3CE;margin-top:14px;padding-inline-start:.42em}
+footer .ftag{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#EAD3CE;margin-top:8px}
+footer .links{margin-top:22px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+footer .links a{text-decoration:none}
+footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
 
 .float{position:fixed;inset-inline:16px;bottom:14px;z-index:30;display:flex;justify-content:center}
-.float a{box-shadow:0 8px 24px rgba(74,47,44,.25);width:100%;max-width:420px;text-align:center}
-@media(min-width:760px){.float{display:none}footer{padding-bottom:34px}}
+.float a{box-shadow:0 8px 24px rgba(74,47,44,.28);width:100%;max-width:420px}
+@media(min-width:760px){.float{display:none}footer{padding-bottom:44px}}
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.450 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.82 14.130c-.25.69-1.430 1.32-1.980 1.37-.5.05-1.130.07-1.830-.11-.42-.13-.96-.31-1.650-.61-2.900-1.250-4.800-4.170-4.940-4.360-.15-.2-1.180-1.570-1.180-2.990 0-1.420.75-2.120 1.010-2.410.27-.3.58-.37.78-.37h.56c.18 0 .42-.07.66.5.25.59.84 2.040.91 2.190.08.15.12.32.03.52-.1.2-.15.32-.3.49l-.44.52c-.15.15-.3.31-.13.6.17.3.77 1.270 1.650 2.060 1.130 1.010 2.090 1.320 2.390 1.470.3.15.47.12.64-.07.17-.2.74-.86.94-1.160.2-.3.39-.25.66-.15.27.1 1.720.81 2.020.96.3.15.49.22.57.34.07.13.07.72-.18 1.410z"/></symbol>
+  <symbol id="ph" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+</svg>
+
 <header>
   <div class="wrap">
-    <a href="#top"><img src="assets/logo-dark.png" alt="GM social media management"></a>
+    <a class="mark" href="#top"><img src="assets/gm-mark.png" alt="GM social media management"></a>
     <nav>
-      <a href="#about">מי אני</a>
-      <a href="#services">שירותים</a>
-      <a href="#approach">הגישה</a>
-      <a href="#work">עבודות</a>
-      <a href="#faq">שאלות</a>
+      <a href="#about"><span class="he">מי אני</span><span class="en">About</span></a>
+      <a href="#services"><span class="he">שירותים</span><span class="en">Services</span></a>
+      <a href="#approach"><span class="he">התהליך</span><span class="en">Process</span></a>
+      <a href="#packages"><span class="he">חבילות</span><span class="en">Packages</span></a>
+      <a href="#extras"><span class="he">שירותים נוספים</span><span class="en">Add-ons</span></a>
+      <a href="#work"><span class="he">עבודות</span><span class="en">Work</span></a>
     </nav>
-    <a class="btn small" href="#contact">שיחת היכרות</a>
+    <div class="hd-end">
+      <button class="lang" type="button" id="lang"><span class="he">EN</span><span class="en">עב</span></button>
+      <a class="btn small" data-wa="intro" href="#"><svg><use href="#wa"/></svg><span class="he">וואטסאפ</span><span class="en">WhatsApp</span></a>
+    </div>
   </div>
 </header>
 
@@ -171,202 +241,326 @@ footer a{margin:0 10px}
 <section class="hero">
   <div class="wrap">
     <img class="logo" src="assets/logo-dark.png" alt="GM social media management">
-    <h1>שקט בסושיאל.<br><em>תוכן עם מחשבה מאחוריו.</em></h1>
-    <p>אני גאיה, ואני לוקחת על עצמי את הרשתות של העסק שלך: אסטרטגיה, תוכן, עיצוב וקידום ממומן. כדי שתוכלו להתרכז בלקדם את העסק.</p>
+    <h1 class="tagline">Make your brand unforgettable</h1>
+    <p class="tagline-he he">להפוך את המותג שלך לבלתי נשכח</p>
+    <p class="intro">
+      <span class="he">אני עוזרת לעסקים להפוך את הנוכחות שלהם ברשת למותג שאנשים עוצרים בשבילו, באמצעות אסטרטגיה מדויקת, תוכן יצירתי ושפה ויזואלית שמרגישה נכונה לעסק.</span>
+      <span class="en">I help businesses turn their online presence into a brand people stop scrolling for, through precise strategy, creative content and a visual language that feels right for the business.</span>
+    </p>
     <div class="actions">
-      <a class="btn" href="#contact">לקבוע שיחת היכרות</a>
-      <a class="btn ghost" href="#work">לראות עבודות</a>
-    </div>
-    <p class="sub">עובדת עם עסקים באזור המרכז והדרום (אזור אשדוד)</p>
-  </div>
-</section>
-
-<section class="need">
-  <div class="wrap">
-    <p class="quote">אתם יודעים שלסושיאל יש חלק משמעותי בצמיחה של העסק.<br>פשוט אין לכם זמן וכוח להתעסק בו.</p>
-    <p>ואולי כבר נפגעתם ממי שלא ידעה מה היא עושה, והרגשתם שזה בזבוז כסף. אצלי כל תוכן נולד מהבנה אמיתית של העסק, של הקהל ושל המטרות, ואתם נשארים מעודכנים בלי לשאת באחריות.</p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <p class="eyebrow">מי אני</p>
-    <h2>אני לא יוצרת תוכן רק כדי שיהיה מה להעלות</h2>
-    <p class="lead">אני גאיה, שנה וחצי בתחום, ומתייחסת לכל עסק שאני עובדת איתו כאילו הוא העסק שלי. חשוב לי להבין מי עומד מאחוריו, מה המטרות שלו, למי הוא רוצה להגיע ומה באמת יכול לעבוד בשבילו. [ספרי כאן במשפט-שניים על עצמך]</p>
-  </div>
-</section>
-
-<section id="approach" class="why">
-  <div class="wrap">
-    <p class="eyebrow">הגישה</p>
-    <h2>ככה אני עובדת</h2>
-    <div class="grid g3">
-      <div class="card"><div class="n">01</div><h3>מבינה לעומק</h3><p>לפני שמעלים משהו, אני מכירה את העסק, את בעליו ואת הקהל שהוא רוצה להגיע אליו.</p></div>
-      <div class="card"><div class="n">02</div><h3>כל תוכן עם מחשבה</h3><p>שילוב של יצירתיות, אסתטיקה וחשיבה אסטרטגית, כך שהתוכן מתאים לאופי העסק ומשרת את המטרות שלו.</p></div>
-      <div class="card"><div class="n">03</div><h3>מעורבת ומשתפרת</h3><p>מביאה רעיונות חדשים, בודקת מה עובד ומדייקת כל הזמן, בתקשורת פתוחה לאורך הדרך.</p></div>
+      <a class="btn" data-wa="intro" href="#"><svg><use href="#wa"/></svg><span class="he">לשיחת היכרות בוואטסאפ</span><span class="en">Let's talk on WhatsApp</span></a>
+      <a class="btn ghost" href="#work"><span class="he">לראות עבודות</span><span class="en">See my work</span></a>
     </div>
   </div>
 </section>
 
-<section id="services">
+<section id="about" class="alt">
+  <div class="wrap about">
+    <div class="photo"><img src="assets/gaya.jpg" alt="גאיה, Gaya M Social" loading="lazy"></div>
+    <div>
+      <h2 class="big"><span class="he">מי אני?</span><span class="en">Who am I?</span></h2>
+      <p class="hi"><span class="he">היי, אני גאיה, מנהלת סושיאל ויוצרת תוכן.</span><span class="en">Hi, I'm Gaya, a social media manager and content creator.</span></p>
+      <p><span class="he">אני עובדת עם עסקים שרוצים שהסושיאל שלהם ירגיש כמו המשך אמיתי של המותג שלהם, ולא פשוט עוד עמוד שמעלה פוסטים.</span><span class="en">I work with businesses that want their social media to feel like a true extension of their brand, not just another page that posts.</span></p>
+      <p><span class="he">אני משלבת בין אסטרטגיה, קריאייטיב, צילום, עריכה והבנה של מה גורם לאנשים לעצור, להסתכל ולהתחבר, כדי ליצור נוכחות שהיא גם אסתטית וגם עובדת עבור העסק.</span><span class="en">I combine strategy, creative, shooting, editing and an understanding of what makes people stop, look and connect, to build a presence that is both beautiful and works for the business.</span></p>
+      <p class="belief"><span class="he">מבחינתי, תוכן טוב לא מתחיל בטרנד.<br>הוא מתחיל בלהבין מה אנחנו רוצים שאנשים ירגישו כשהם פוגשים את המותג.</span><span class="en">For me, good content doesn't start with a trend.<br>It starts with understanding what we want people to feel when they meet the brand.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="blush">
   <div class="wrap">
-    <p class="eyebrow">שירותים</p>
-    <h2>הכול במקום אחד</h2>
-    <p class="lead">שתי חבילות חודשיות לניהול מלא של הרשתות, ועוד שירותים לפי הצורך. את המחיר והפרטים נעבור יחד בשיחת ההיכרות.</p>
+    <p class="eyebrow">Our services</p>
+    <h2 class="en-title">A complete social media solution.</h2>
+    <p class="lead"><span class="he">מעטפת שלמה שנבנית סביב המותג שלך, מהכיוון הקריאייטיבי ועד לנוכחות היומיומית בסושיאל, כדי שכל מה שיוצא החוצה ירגיש מדויק, אחיד ונכון לעסק.</span><span class="en">A complete package built around your brand, from creative direction to your everyday social presence, so everything that goes out feels precise, consistent and right for the business.</span></p>
+    <div class="tags"><span>STRATEGY · CONTENT · MANAGEMENT</span><span>SHOOTING DAYS · REELS · EDITING</span><span>CONCEPTS · VISUAL DIRECTION · BRAND FEEL</span></div>
+    <div class="grid g2">
+      <div class="card"><div class="n">01 — SOCIAL MEDIA MANAGEMENT</div>
+        <p><span class="he">ניהול הסושיאל מקצה לקצה: בניית אסטרטגיה, גאנט חודשי, העלאת תכנים, כתיבה, קריאייטיב וניהול הנוכחות השוטפת של המותג.</span><span class="en">End-to-end social management: strategy, a monthly content calendar, publishing, copywriting, creative and the brand's day-to-day presence.</span></p></div>
+      <div class="card"><div class="n">02 — CONTENT CREATION</div>
+        <p><span class="he">ימי צילום ותוכן שמותאם במיוחד למותג, החל מהקונספט והשוט ליסט ועד לצילום, עריכה והתוצר הסופי.</span><span class="en">Shoot days and content tailored to the brand, from concept and shot list through shooting, editing and the final piece.</span></p></div>
+      <div class="card"><div class="n">03 — CREATIVE DIRECTION</div>
+        <p><span class="he">בניית שפה ויזואלית וכיוון קריאייטיבי שמחברים את כל התוכן לעולם אחד ברור ומזוהה.</span><span class="en">A visual language and creative direction that tie all the content into one clear, recognizable world.</span></p></div>
+      <div class="card"><div class="n">04 — AI &amp; CREATIVE CONTENT</div>
+        <p><span class="he">שילוב כלי AI בתוך הקריאייטיב ליצירת ויז'ואלים, קונספטים ותוכן שקשה להתעלם ממנו.</span><span class="en">AI tools woven into the creative to produce visuals, concepts and content that's hard to ignore.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <p class="eyebrow">From idea to feed</p>
+    <h2 class="en-title">How we bring your brand to life</h2>
+    <p class="lead"><span class="he">לכל מותג מותאמת אסטרטגיה שונה, לכן התהליך מתחיל הרבה לפני שמצלמים את הריל הראשון.</span><span class="en">Every brand gets its own strategy, so the process starts long before the first reel is shot.</span></p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>DISCOVER</h3><p><span class="he">מכירה את העסק, הקהל, המטרות והכיוון שאליו אנחנו רוצים לקחת את המותג.</span><span class="en">Getting to know the business, the audience, the goals and where we want to take the brand.</span></p></div>
+      <div class="step"><div class="n">02</div><h3>BUILD</h3><p><span class="he">בונה אסטרטגיה, שפה ויזואלית ותוכנית תוכן שמותאמת לעסק.</span><span class="en">Building a strategy, visual language and content plan tailored to the business.</span></p></div>
+      <div class="step"><div class="n">03</div><h3>CREATE</h3><p><span class="he">מתכננת ומפיקה את התוכן: צילום, קריאייטיב, עריכה וקופי.</span><span class="en">Planning and producing the content: shooting, creative, editing and copy.</span></p></div>
+      <div class="step"><div class="n">04</div><h3>GROW</h3><p><span class="he">מעלים, בודקים מה עובד, לומדים וממשיכים לדייק את התוכן מחודש לחודש.</span><span class="en">Publishing, checking what works, learning and refining the content month after month.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="wrap">
+    <p class="eyebrow"><span class="he">חבילות ניהול סושיאל</span><span class="en">Social media packages</span></p>
+    <h2><span class="he">ניהול חודשי מלא</span><span class="en">Full monthly management</span></h2>
+    <p class="lead"><span class="he">נוכחות מדויקת, תוכן איכותי וניהול שוטף שמתאים לקצב של העסק שלך. את המחיר נעבור יחד בשיחת ההיכרות.</span><span class="en">A precise presence, quality content and ongoing management at your business's pace. We'll go over pricing together in our intro call.</span></p>
     <div class="grid g2">
       <div class="pkg">
-        <h3>חבילת בסיס</h3>
+        <div class="pkg-hd"><h3><span class="he">חבילת בסיס</span><span class="en">Basic</span></h3><small><span class="he">נוכחות עקבית ומקצועית</span><span class="en">A consistent, professional presence</span></small></div>
         <ul>
-          <li>ניהול עמודים: אינסטגרם, פייסבוק וטיקטוק</li>
-          <li>אסטרטגיית תוכן וגאנט חודשי</li>
-          <li>עיצוב, עריכה וקופי</li>
-          <li>2 תכני Feed בשבוע (פוסט, ריל או קרוסלה)</li>
-          <li>3 פעימות סטורי בשבוע</li>
-          <li>תזמון והעלאה</li>
-          <li>ניהול קידום ממומן</li>
-          <li>ניתוח נתונים חודשי</li>
-          <li>מעקב אחר טרנדים, מתחרים והזדמנויות</li>
-          <li>ניהול היילייטים</li>
-          <li>יום צילום חודשי</li>
+          <li><span class="he">ניהול עמודים: אינסטגרם, פייסבוק, טיקטוק</span><span class="en">Page management: Instagram, Facebook, TikTok</span></li>
+          <li><span class="he">אסטרטגיית תוכן</span><span class="en">Content strategy</span></li>
+          <li><span class="he">גאנט תוכן כל חודש</span><span class="en">Monthly content calendar</span></li>
+          <li><span class="he">עיצוב, עריכת תוכן וקופי</span><span class="en">Design, editing and copywriting</span></li>
+          <li><span class="he">תזמון והעלאת תכנים</span><span class="en">Scheduling and publishing</span></li>
+          <li><b><span class="he">2 תכני Feed בשבוע</span><span class="en">2 feed posts a week</span></b> <span class="he">(פוסט, ריל או קרוסלה)</span><span class="en">(post, reel or carousel)</span></li>
+          <li><b><span class="he">3 פעימות סטורי בשבוע</span><span class="en">3 story drops a week</span></b> <span class="he">(5-7 סטורים בפעימה)</span><span class="en">(5-7 stories each)</span></li>
+          <li><b><span class="he">יום צילום אחד בחודש</span><span class="en">1 shoot day a month</span></b> <span class="he">(עד 4 שעות)</span><span class="en">(up to 4 hours)</span></li>
+          <li><span class="he">ניהול קידום ממומן</span><span class="en">Paid ads management</span></li>
+          <li><span class="he">ניתוח נתונים חודשי</span><span class="en">Monthly analytics</span></li>
+          <li><span class="he">מעקב טרנדים, מתחרים והזדמנויות תוכן</span><span class="en">Tracking trends, competitors and content opportunities</span></li>
+          <li><span class="he">ניהול וסידור שוטף של היילייטים</span><span class="en">Ongoing highlights management</span></li>
         </ul>
+        <div class="pkg-ft">
+          <p><span class="he">עד 2 סבבי תיקונים לכל פריט תוכן</span><span class="en">Up to 2 revision rounds per content item</span></p>
+          <a class="btn block" data-wa="basic" href="#"><svg><use href="#wa"/></svg><span class="he">לפרטים על חבילת בסיס</span><span class="en">Ask about Basic</span></a>
+        </div>
       </div>
-      <div class="pkg dark">
-        <h3>חבילת פרימיום</h3>
+      <div class="pkg top">
+        <div class="pkg-hd"><h3><span class="he">חבילת פרימיום</span><span class="en">Premium</span></h3><small><span class="he">יותר תוכן, יותר צילום</span><span class="en">More content, more shooting</span></small></div>
         <ul>
-          <li>כל מה שבחבילת הבסיס</li>
-          <li>3 תכני Feed בשבוע</li>
-          <li>4 פעימות סטורי בשבוע</li>
-          <li>2 ימי צילום בחודש</li>
+          <li><span class="he">ניהול עמודים: אינסטגרם, פייסבוק, טיקטוק</span><span class="en">Page management: Instagram, Facebook, TikTok</span></li>
+          <li><span class="he">אסטרטגיית תוכן</span><span class="en">Content strategy</span></li>
+          <li><span class="he">גאנט תוכן כל חודש</span><span class="en">Monthly content calendar</span></li>
+          <li><span class="he">עיצוב, עריכת תוכן וקופי</span><span class="en">Design, editing and copywriting</span></li>
+          <li><span class="he">תזמון והעלאת תכנים</span><span class="en">Scheduling and publishing</span></li>
+          <li><b><span class="he">3 תכני Feed בשבוע</span><span class="en">3 feed posts a week</span></b> <span class="he">(פוסט, ריל או קרוסלה)</span><span class="en">(post, reel or carousel)</span></li>
+          <li><b><span class="he">4 פעימות סטורי בשבוע</span><span class="en">4 story drops a week</span></b> <span class="he">(5-7 סטורים בפעימה)</span><span class="en">(5-7 stories each)</span></li>
+          <li><b><span class="he">2 ימי צילום בחודש</span><span class="en">2 shoot days a month</span></b> <span class="he">(עד 4 שעות כל אחד)</span><span class="en">(up to 4 hours each)</span></li>
+          <li><span class="he">ניהול קידום ממומן</span><span class="en">Paid ads management</span></li>
+          <li><span class="he">ניתוח נתונים חודשי</span><span class="en">Monthly analytics</span></li>
+          <li><span class="he">מעקב טרנדים, מתחרים והזדמנויות תוכן</span><span class="en">Tracking trends, competitors and content opportunities</span></li>
+          <li><span class="he">ניהול וסידור שוטף של היילייטים</span><span class="en">Ongoing highlights management</span></li>
         </ul>
+        <div class="pkg-ft">
+          <p><span class="he">עד 2 סבבי תיקונים לכל פריט תוכן</span><span class="en">Up to 2 revision rounds per content item</span></p>
+          <a class="btn block" data-wa="premium" href="#"><svg><use href="#wa"/></svg><span class="he">לפרטים על חבילת פרימיום</span><span class="en">Ask about Premium</span></a>
+        </div>
       </div>
     </div>
-    <p class="note">תקציב הפרסום הממומן עצמו אינו כלול בחבילות.</p>
-
-    <h3 style="margin-top:50px">ימי צילום ויצירת תוכן</h3>
-    <div class="grid g2" style="margin-top:18px">
-      <div class="card"><h3>סשן צילום קצר</h3><p>תכנון קונספטים ורשימת שוטים, וצילום של עד 3 שעות שמסתיים בעד 4 סרטונים ערוכים.</p></div>
-      <div class="card"><h3>יום צילום מורחב</h3><p>עד 5 שעות צילום ועד 6 סרטונים, כולל בניית מאגר תוכן לחודש שלם.</p></div>
-    </div>
-
-    <h3 style="margin-top:50px">ועוד</h3>
-    <div class="chips">
-      <span>ניהול משפיענים</span><span>עיצוב גרפי חד-פעמי</span><span>סרטון או פוסט נוסף</span><span>חבילת סטוריז</span><span>גאנט תוכן בלבד</span><span>עבודה דחופה</span>
-    </div>
+    <p class="note"><span class="he">* תקציב הפרסום הממומן אינו כלול בחבילות ומשולם בנפרד.</span><span class="en">* The paid ads budget itself is not included and is paid separately.</span></p>
+    <div class="box"><b><span class="he">החבילות נבנות כדי לתת לעסק נוכחות עקבית ומקצועית,</span><span class="en">The packages are built to give your business a consistent, professional presence,</span></b><br><span class="he">תוך שמירה על שפה ויזואלית אחידה, תכנון מראש וקריאייטיב שמרגיש נכון למותג.</span><span class="en">with a unified visual language, advance planning and creative that feels right for the brand.</span></div>
   </div>
 </section>
 
-<section id="work" class="reels">
+<section id="shoots" class="alt">
   <div class="wrap">
-    <p class="eyebrow">עבודות</p>
-    <h2>קצת ממה שיצרתי</h2>
-    <p class="lead">לחצו על סרטון כדי לצפות.</p>
+    <p class="eyebrow"><span class="he">ימי צילום ויצירת תוכן</span><span class="en">Shoot days &amp; content creation</span></p>
+    <h2><span class="he">צילום שהופך לתוכן לחודש</span><span class="en">One shoot, a month of content</span></h2>
+    <p class="lead"><span class="he">אפשר להוסיף צילום חודשי לחבילה, או להזמין סשן חד-פעמי.</span><span class="en">Add a monthly shoot to your package, or book a one-time session.</span></p>
+    <div class="grid g2">
+      <div class="card shoot">
+        <h3><span class="he">סשן צילום קצר</span><span class="en">Short session</span></h3>
+        <div class="meta"><span><span class="he">עד 3 שעות</span><span class="en">Up to 3 hours</span></span><span><span class="he">עד 4 סרטונים ערוכים</span><span class="en">Up to 4 edited videos</span></span></div>
+        <ul>
+          <li><span class="he">תכנון קונספטים ושוט ליסט מראש</span><span class="en">Concepts and shot list planned in advance</span></li>
+          <li><span class="he">מתאים ליצירת מאגר תוכן ממוקד למותג</span><span class="en">Great for a focused content bank</span></li>
+          <li><span class="he">קבלת חומרי גלם לתוכן החודשי</span><span class="en">Raw footage for your monthly content</span></li>
+        </ul>
+      </div>
+      <div class="card shoot">
+        <h3><span class="he">יום צילום מורחב</span><span class="en">Extended shoot day</span></h3>
+        <div class="meta"><span><span class="he">עד 5 שעות</span><span class="en">Up to 5 hours</span></span><span><span class="he">עד 6 סרטונים ערוכים</span><span class="en">Up to 6 edited videos</span></span></div>
+        <ul>
+          <li><span class="he">תכנון קריאייטיב וקונספטים לצילום</span><span class="en">Creative direction and shoot concepts</span></li>
+          <li><span class="he">בניית מאגר תוכן רחב לחודש</span><span class="en">A broad content bank for the month</span></li>
+          <li><span class="he">קבלת חומרי גלם לתוכן החודשי</span><span class="en">Raw footage for your monthly content</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="box"><b><span class="he">המטרה ביום צילום היא לא רק לייצר עוד תוכן,</span><span class="en">A shoot day isn't just about making more content,</span></b><br><span class="he">אלא ליצור מראש חומר מדויק שאפשר להפוך לתוכן מגוון, עקבי ומחובר למותג.</span><span class="en">it's about creating precise material that becomes varied, consistent, on-brand content.</span></div>
+    <div class="center"><a class="btn" data-wa="shoot" href="#"><svg><use href="#wa"/></svg><span class="he">לתיאום יום צילום</span><span class="en">Book a shoot day</span></a></div>
+  </div>
+</section>
+
+<section id="extras">
+  <div class="wrap">
+    <p class="eyebrow"><span class="he">שירותים נוספים</span><span class="en">Add-on services</span></p>
+    <h2><span class="he">תוספות לפי הצורך</span><span class="en">Extras, as you need them</span></h2>
+    <p class="lead"><span class="he">שירותים שאפשר להוסיף לחבילה או להזמין בנפרד, בהתאם לצרכים של העסק.</span><span class="en">Services you can add to a package or order separately, based on what your business needs.</span></p>
+    <div class="extras">
+      <div class="extra"><h3><span class="he">סרטון נוסף</span><span class="en">Extra video</span></h3><p><span class="he">עריכת סרטון מחומרי גלם קיימים, כולל חיתוכים, מוזיקה, טקסט ועריכה בסיסית</span><span class="en">Editing from existing footage, including cuts, music, text and basic edit</span></p></div>
+      <div class="extra"><h3><span class="he">פוסט או קרוסלה נוספים</span><span class="en">Extra post or carousel</span></h3><p><span class="he">תוכן מעבר לכמות שבחבילה, כולל עיצוב וכתיבת קופי</span><span class="en">Content beyond your package, including design and copy</span></p></div>
+      <div class="extra"><h3><span class="he">סטורי בודד</span><span class="en">Single story</span></h3><p><span class="he">עיצוב והכנת סטורי מעבר לכמות שבחבילה</span><span class="en">A designed story beyond your package</span></p></div>
+      <div class="extra"><h3><span class="he">חבילת 5 סטורים (פעימה)</span><span class="en">5-story drop</span></h3><p><span class="he">יצירה ועיצוב של 5 סטורים סביב נושא, מוצר, מבצע או מסר</span><span class="en">5 designed stories around a topic, product, promotion or message</span></p></div>
+      <div class="extra"><h3><span class="he">ניהול משפיענים</span><span class="en">Influencer management</span></h3><p><span class="he">איתור יוצרים מתאימים, יצירת קשר, תיאום שיתוף הפעולה ומעקב אחר התוכן ושיתופו</span><span class="en">Finding the right creators, outreach, coordination and tracking the content</span></p></div>
+      <div class="extra"><h3><span class="he">עיצוב גרפי חד-פעמי</span><span class="en">One-off graphic design</span></h3><p><span class="he">מודעת מבצע, הזמנה, פוסטר, באנר או גרפיקה ייעודית</span><span class="en">A promo ad, invitation, poster, banner or custom graphic</span></p></div>
+      <div class="extra"><h3><span class="he">גאנט תוכן בלבד</span><span class="en">Content calendar only</span></h3><p><span class="he">תכנון חודשי של התוכן, להפעלה בעצמכם</span><span class="en">A monthly content plan you run yourself</span></p></div>
+      <div class="extra"><h3><span class="he">עבודה דחופה</span><span class="en">Rush work</span></h3><p><span class="he">יצירה או עריכת תוכן בהתראה של עד 48 שעות, לפי זמינות</span><span class="en">Content created or edited within 48 hours, subject to availability</span></p></div>
+      <div class="extra"><h3><span class="he">סבב תיקונים נוסף</span><span class="en">Extra revision round</span></h3><p><span class="he">מעבר לשני סבבי התיקונים הכלולים</span><span class="en">Beyond the 2 included revision rounds</span></p></div>
+    </div>
+    <div class="box"><b><span class="he">המחיר נקבע לפי היקף השירות, כמות התוכן והמורכבות.</span><span class="en">Pricing depends on scope, amount of content and complexity.</span></b><br><span class="he">כל השירותים, התוצרים והעלויות מסוכמים מראש, כדי שתהליך העבודה יהיה ברור ומסודר.</span><span class="en">All services, deliverables and costs are agreed in advance, for a clear process.</span></div>
+    <div class="center"><a class="btn" data-wa="extras" href="#"><svg><use href="#wa"/></svg><span class="he">לשאול על שירות נוסף</span><span class="en">Ask about an add-on</span></a></div>
+  </div>
+</section>
+
+<section id="work" class="alt">
+  <div class="wrap">
+    <p class="eyebrow"><span class="he">עבודות</span><span class="en">Work</span></p>
+    <h2><span class="he">קצת ממה שיצרתי</span><span class="en">A few things I've made</span></h2>
+    <p class="lead"><span class="he">לחצו על סרטון כדי לצפות עם סאונד 🔊</span><span class="en">Tap a video to watch with sound 🔊</span></p>
     <div class="reelgrid">
-      <div class="reel"><video src="assets/reel-recipe.mp4" poster="assets/reel-recipe.jpg" playsinline muted loop preload="none"></video><div class="play"><i></i></div></div>
-      <div class="reel"><video src="assets/reel-bts.mp4" poster="assets/reel-bts.jpg" playsinline muted loop preload="none"></video><div class="play"><i></i></div></div>
-      <div class="reel"><video src="assets/reel-soap.mp4" poster="assets/reel-soap.jpg" playsinline muted loop preload="none"></video><div class="play"><i></i></div></div>
+      <div class="reel"><video src="assets/reel-recipe.mp4" poster="assets/reel-recipe.jpg" playsinline loop preload="none"></video><div class="play"><i></i></div></div>
+      <div class="reel"><video src="assets/reel-bts.mp4" poster="assets/reel-bts.jpg" playsinline loop preload="none"></video><div class="play"><i></i></div></div>
+      <div class="reel"><video src="assets/reel-soap.mp4" poster="assets/reel-soap.jpg" playsinline loop preload="none"></video><div class="play"><i></i></div></div>
     </div>
-    <div class="center"><a class="btn ghost" href="https://www.instagram.com/gayam_social/" target="_blank" rel="noopener">לעוד עבודות באינסטגרם</a></div>
+    <div class="center"><a class="btn ghost" href="https://www.instagram.com/gayam_social/" target="_blank" rel="noopener"><span class="he">לעוד עבודות באינסטגרם</span><span class="en">More on Instagram</span></a></div>
   </div>
 </section>
 
-<section id="results">
+<section id="results" class="blush">
   <div class="wrap">
-    <p class="eyebrow">תוצאות</p>
-    <h2>לפני ואחרי: SHAN</h2>
-    <p class="lead">עמוד האינסטגרם של SHAN, סטודיו להשכרת שמלות ערב, ביום שהתחלנו לעבוד יחד ואחרי תקופת העבודה.</p>
-    <div class="stats">
-      <div><b>816</b><span>עוקבים (לפני: 359)</span></div>
-      <div><b>179.2K</b><span>צפיות ב-30 ימים (לפני: 66.3K)</span></div>
+    <p class="eyebrow"><span class="he">תוצאות</span><span class="en">Results</span></p>
+    <h2><span class="he">SHAN: לפני ואחרי</span><span class="en">SHAN: before &amp; after</span></h2>
+    <p class="lead"><span class="he">SHAN הוא סטודיו להשכרת שמלות ערב בראשון לציון. ככה נראה עמוד האינסטגרם שלו ביום שהתחלנו לעבוד יחד, ומה השתנה מאז:</span><span class="en">SHAN is an evening-dress rental studio in Rishon LeZion. Here's its Instagram on the day we started working together, and what changed since:</span></p>
+    <div class="compare">
+      <div class="stat">
+        <div class="k"><span class="he">צפיות ב-30 יום</span><span class="en">Views in 30 days</span></div>
+        <div class="row"><span class="now">179.2K</span><span class="up">×2.7</span></div>
+        <div class="bars">
+          <div class="bar"><span><span class="he">לפני</span><span class="en">Before</span></span><div style="width:37%"></div></div>
+          <div class="bar after"><span><span class="he">אחרי</span><span class="en">After</span></span><div style="width:100%"></div></div>
+        </div>
+        <div class="k" style="margin-top:8px"><span class="he">לפני: 66.3K</span><span class="en">Before: 66.3K</span></div>
+      </div>
+      <div class="stat">
+        <div class="k"><span class="he">עוקבים</span><span class="en">Followers</span></div>
+        <div class="row"><span class="now">816</span><span class="up">×2.3</span></div>
+        <div class="bars">
+          <div class="bar"><span><span class="he">לפני</span><span class="en">Before</span></span><div style="width:44%"></div></div>
+          <div class="bar after"><span><span class="he">אחרי</span><span class="en">After</span></span><div style="width:100%"></div></div>
+        </div>
+        <div class="k" style="margin-top:8px"><span class="he">לפני: 359</span><span class="en">Before: 359</span></div>
+      </div>
+      <div class="stat">
+        <div class="k"><span class="he">פוסטים בפיד</span><span class="en">Feed posts</span></div>
+        <div class="row"><span class="now">82</span><span class="up">+36</span></div>
+        <div class="bars">
+          <div class="bar"><span><span class="he">לפני</span><span class="en">Before</span></span><div style="width:56%"></div></div>
+          <div class="bar after"><span><span class="he">אחרי</span><span class="en">After</span></span><div style="width:100%"></div></div>
+        </div>
+        <div class="k" style="margin-top:8px"><span class="he">לפני: 46</span><span class="en">Before: 46</span></div>
+      </div>
     </div>
-    <div class="ba">
-      <figure><img src="assets/shan-before.jpg" alt="עמוד האינסטגרם של SHAN לפני"><figcaption>לפני</figcaption></figure>
-      <figure><img src="assets/shan-after.jpg" alt="עמוד האינסטגרם של SHAN אחרי"><figcaption>אחרי</figcaption></figure>
+    <div class="changes">
+      <div class="change"><b><span class="he">היילייטים שמספרים סיפור</span><span class="en">Highlights that tell a story</span></b><span><span class="he">במקום עיגולים עם אות, כיסויים מצולמים בשפה אחידה: אודות, עיצוב, שמלות שחורות, Shan girls.</span><span class="en">Instead of plain letter circles, photo covers in one visual language: About, Design, Black dresses, Shan girls.</span></span></div>
+      <div class="change"><b><span class="he">פיד אחיד ומושקע</span><span class="en">A consistent, polished feed</span></b><span><span class="he">תוכן קבוע, צילומים בסגנון אחד ורילס שמראים את השמלות בתנועה.</span><span class="en">Regular content, a single photographic style and reels that show the dresses in motion.</span></span></div>
     </div>
+    <details class="shots">
+      <summary><span class="he">לצילומי המסך המקוריים</span><span class="en">View the original screenshots</span></summary>
+      <div class="shotgrid">
+        <figure><img src="assets/shan-before.jpg" alt="SHAN before" loading="lazy"><figcaption><span class="he">לפני</span><span class="en">Before</span></figcaption></figure>
+        <figure><img src="assets/shan-after.jpg" alt="SHAN after" loading="lazy"><figcaption><span class="he">אחרי</span><span class="en">After</span></figcaption></figure>
+      </div>
+    </details>
   </div>
 </section>
 
-<section class="why">
+<section>
   <div class="wrap">
-    <p class="eyebrow">מה אומרים עליי</p>
-    <h2>בקול של לקוחה</h2>
+    <p class="eyebrow"><span class="he">מה אומרים עליי</span><span class="en">Kind words</span></p>
+    <h2><span class="he">בקול של לקוחה</span><span class="en">In a client's own voice</span></h2>
     <div class="t">
       <div class="tcard">
-        <blockquote>"אני סומכת עלייך, אני יודעת שהמותג שלי בידיים טובות. את באה עם המון רצון טוב, באמת אכפת לך, ומנסה לצאת מהקופסה ולעשות משהו מיוחד. אני בטוחה שתצליחי."</blockquote>
-        <cite>לקוחה</cite>
+        <blockquote><span class="he">"אני סומכת עלייך, אני יודעת שהמותג שלי בידיים טובות. את באה עם המון רצון טוב, באמת אכפת לך, ומנסה לצאת מהקופסה ולעשות משהו מיוחד. אני בטוחה שתצליחי."</span><span class="en">"I trust you, I know my brand is in good hands. You come with so much goodwill, you truly care, and you try to think outside the box and do something special."</span></blockquote>
+        <cite><span class="he">לקוחה (הקלטה מקורית)</span><span class="en">Client (original recording, in Hebrew)</span></cite>
         <audio controls preload="none" src="assets/rec-1.m4a"></audio>
       </div>
       <div class="tcard">
-        <blockquote>"הסתכלתי על הפיד ואיזה שינוי עבר. זה מתחיל לתת את התפוקה והשינוי שרציתי. הרגשתי שאני לא ממש מתחברת לתוצרים שלי, ועכשיו זה נראה פיד יפה ומתוחזק, בסגנון מאוד אחיד ומושקע, ואני מתחילה לאהוב את מה שקורה."</blockquote>
-        <cite>לקוחה</cite>
+        <blockquote><span class="he">"הסתכלתי על הפיד ואיזה שינוי עבר. זה מתחיל לתת את התפוקה והשינוי שרציתי. הרגשתי שאני לא ממש מתחברת לתוצרים שלי, ועכשיו זה נראה פיד יפה ומתוחזק, בסגנון מאוד אחיד ומושקע, ואני מתחילה לאהוב את מה שקורה."</span><span class="en">"I looked at the feed and what a change. It's starting to deliver the change I wanted. I didn't really connect with my content before, and now it's a beautiful, well-kept feed, very consistent and polished, and I'm starting to love what's happening."</span></blockquote>
+        <cite><span class="he">לקוחה (הקלטה מקורית)</span><span class="en">Client (original recording, in Hebrew)</span></cite>
         <audio controls preload="none" src="assets/rec-2.m4a"></audio>
       </div>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<section id="faq" class="alt">
   <div class="wrap">
-    <p class="eyebrow">שאלות נפוצות</p>
-    <h2>מה שאנשים שואלים לפני שמתחילים</h2>
-    <details>
-      <summary>תוך כמה זמן רואים תוצאות?</summary>
-      <p>סושיאל הוא תהליך שנבנה לאורך זמן. כבר בהתחלה אפשר לראות שינוי בנראות, בסדר ובעקביות של העמוד, אבל צמיחה בחשיפה, במעורבות ובפניות תלויה בגורמים נוספים ודורשת זמן והתמדה. לרוב זה לוקח לפחות שלושה חודשים.</p>
+    <p class="eyebrow"><span class="he">שאלות נפוצות</span><span class="en">FAQ</span></p>
+    <h2><span class="he">מה שואלים לפני שמתחילים</span><span class="en">What people ask before we start</span></h2>
+    <details class="q">
+      <summary><span class="he">תוך כמה זמן רואים תוצאות?</span><span class="en">How soon will I see results?</span></summary>
+      <p><span class="he">סושיאל הוא תהליך שנבנה לאורך זמן. כבר בהתחלה אפשר לראות שינוי בנראות, בסדר ובעקביות של העמוד, אבל צמיחה בחשיפה, במעורבות ובפניות תלויה בגורמים נוספים ודורשת זמן והתמדה. לרוב זה לוקח לפחות שלושה חודשים.</span><span class="en">Social media is built over time. Early on you'll see a change in how your page looks, its order and consistency, but growth in reach, engagement and leads depends on more factors and takes time and persistence. It usually takes at least three months.</span></p>
     </details>
-    <details>
-      <summary>מה מבדיל אותך ממנהלות סושיאל אחרות?</summary>
-      <p>אני לא מאמינה ביצירת תוכן רק בשביל להעלות משהו לעמוד. אני באמת מתייחסת לכל עסק שאני עובדת איתו כאילו הוא העסק שלי, וחשוב לי להבין מה עומד מאחוריו ולשלב בין יצירתיות, אסתטיקה וחשיבה אסטרטגית בכל תוכן שאני יוצרת.</p>
+    <details class="q">
+      <summary><span class="he">מה מבדיל אותך ממנהלות סושיאל אחרות?</span><span class="en">What makes you different?</span></summary>
+      <p><span class="he">אני לא מאמינה ביצירת תוכן רק בשביל להעלות משהו לעמוד. אני באמת מתייחסת לכל עסק שאני עובדת איתו כאילו הוא העסק שלי, וחשוב לי להבין מה עומד מאחוריו ולשלב בין יצירתיות, אסתטיקה וחשיבה אסטרטגית בכל תוכן שאני יוצרת.</span><span class="en">I don't believe in creating content just to post something. I treat every business I work with as my own, and I make sure to understand what stands behind it and combine creativity, aesthetics and strategy in everything I create.</span></p>
     </details>
-    <details>
-      <summary>האם אני צריך להיות מעורב בתהליך?</summary>
-      <p>כן, בעיקר בהתחלה, כדי שאוכל להכיר את העסק כמו שצריך. בהמשך אני דואגת לתכנון וליצירת התוכן, תוך שמירה על תקשורת ושיתוף פעולה כדי לוודא שאנחנו בכיוון הנכון.</p>
+    <details class="q">
+      <summary><span class="he">האם אני צריך להיות מעורב בתהליך?</span><span class="en">Do I need to be involved?</span></summary>
+      <p><span class="he">כן, בעיקר בהתחלה, כדי שאוכל להכיר את העסק כמו שצריך. בהמשך אני דואגת לתכנון וליצירת התוכן, תוך שמירה על תקשורת ושיתוף פעולה כדי לוודא שאנחנו בכיוון הנכון.</span><span class="en">Yes, mainly at the start, so I can get to know your business properly. After that I handle planning and creation, while keeping in touch to make sure we're heading the right way.</span></p>
     </details>
   </div>
 </section>
 
 <section id="contact" class="cta">
   <div class="wrap">
-    <p class="eyebrow" style="color:#d8bdb7">השלב הבא</p>
-    <h2>בואו נכיר</h2>
-    <p class="lead">שיחת היכרות ואסטרטגיה קצרה: נבין מה העסק צריך ואיך אפשר לעשות לכם שקט בסושיאל. בחרו מה נוח לכם.</p>
-    <div class="ctas">
-      <a class="btn" href="https://wa.me/972544987663?text=%D7%94%D7%99%D7%99%20%D7%92%D7%90%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener">שליחת הודעה בוואטסאפ</a>
-      <a class="btn ghost" href="#" title="[קישור ליומן יתווסף]">קביעת מועד ביומן</a>
+    <p class="eyebrow"><span class="he">השלב הבא</span><span class="en">Next step</span></p>
+    <h2><span class="he">בואו נכיר</span><span class="en">Let's meet</span></h2>
+    <p class="lead"><span class="he">שיחת היכרות ואסטרטגיה קצרה: נבין מה העסק צריך ואיך הופכים את הנוכחות שלו ברשת למותג. כתבו לי בוואטסאפ או התקשרו.</span><span class="en">A short intro and strategy call: we'll see what your business needs and how to turn its online presence into a brand. Message me on WhatsApp or call.</span></p>
+    <div class="actions">
+      <a class="btn" data-wa="intro" href="#"><svg><use href="#wa"/></svg><span class="he">שליחת הודעה בוואטסאפ</span><span class="en">Message on WhatsApp</span></a>
+      <a class="btn ghost" href="tel:+972544987663"><svg><use href="#ph"/></svg><span dir="ltr">054-4987663</span></a>
     </div>
-    <form id="lead">
-      <div class="t2">או השאירו פרטים ואחזור אליכם</div>
-      <input name="name" placeholder="שם" required autocomplete="name">
-      <input name="biz" placeholder="שם העסק">
-      <input name="phone" type="tel" placeholder="טלפון" required autocomplete="tel">
-      <button class="btn" type="submit">שליחה</button>
-    </form>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <img src="assets/logo-dark.png" alt="GM social media management">
-  <p><a href="https://wa.me/972544987663" dir="ltr">054-4987663</a><a href="https://www.instagram.com/gayam_social/" target="_blank" rel="noopener" dir="ltr">@gayam_social</a></p>
-  <p style="margin-top:10px" dir="ltr">© GM social media management</p>
+  <img class="fmark" src="assets/gm-mark-light.png" alt="GM">
+  <div class="fline">SOCIAL MEDIA MANAGEMENT</div>
+  <div class="ftag">Make your brand unforgettable</div>
+  <div class="links">
+    <a data-wa="intro" href="#"><span class="he">וואטסאפ</span><span class="en">WhatsApp</span></a>
+    <a href="tel:+972544987663" dir="ltr">054-4987663</a>
+    <a href="https://www.instagram.com/gayam_social/" target="_blank" rel="noopener" dir="ltr">@gayam_social</a>
+  </div>
+  <p class="copy" dir="ltr">© Gaya M Social</p>
 </footer>
 
-<div class="float"><a class="btn" href="#contact">לקבוע שיחת היכרות</a></div>
+<div class="float"><a class="btn" data-wa="intro" href="#"><svg><use href="#wa"/></svg><span class="he">לשיחת היכרות בוואטסאפ</span><span class="en">Let's talk on WhatsApp</span></a></div>
 
 <script>
+var WA='972544987663';
+var MSG={
+  he:{intro:'היי גאיה, הגעתי מהאתר ואשמח לשיחת היכרות',basic:'היי גאיה, אשמח לשמוע על חבילת הבסיס',premium:'היי גאיה, אשמח לשמוע על חבילת הפרימיום',shoot:'היי גאיה, אשמח לתאם יום צילום',extras:'היי גאיה, אשמח לשמוע על השירותים הנוספים'},
+  en:{intro:"Hi Gaya, I found you through your website and I'd love an intro call",basic:"Hi Gaya, I'd like to hear about the Basic package",premium:"Hi Gaya, I'd like to hear about the Premium package",shoot:"Hi Gaya, I'd like to book a shoot day",extras:"Hi Gaya, I'd like to hear about your add-on services"}
+};
+function setLang(l){
+  var h=document.documentElement;
+  h.lang=l;h.dir=l==='en'?'ltr':'rtl';
+  document.querySelectorAll('[data-wa]').forEach(function(a){
+    a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(MSG[l][a.dataset.wa]);
+    a.target='_blank';a.rel='noopener';
+  });
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+var q=new URLSearchParams(location.search).get('lang'),saved=null;
+try{saved=localStorage.getItem('lang')}catch(e){}
+setLang(q==='en'||q==='he'?q:(saved||'he'));
+document.getElementById('lang').addEventListener('click',function(){setLang(document.documentElement.lang==='he'?'en':'he')});
+
 document.querySelectorAll('.reel').forEach(function(r){
   var v=r.querySelector('video');
   r.addEventListener('click',function(){
     if(v.paused){
       document.querySelectorAll('.reel video').forEach(function(o){if(o!==v){o.pause();o.parentNode.classList.remove('on')}});
-      v.muted=false;v.play();r.classList.add('on');
+      v.muted=false;v.volume=1;v.play();r.classList.add('on');
     }else{v.pause();r.classList.remove('on')}
   });
-});
-document.getElementById('lead').addEventListener('submit',function(e){
-  e.preventDefault();
-  var f=e.target;
-  var m='היי גאיה, אשמח לשיחת היכרות.\nשם: '+f.name.value+'\nעסק: '+f.biz.value+'\nטלפון: '+f.phone.value;
-  window.open('https://wa.me/972544987663?text='+encodeURIComponent(m),'_blank');
 });
 </script>
 </body>
