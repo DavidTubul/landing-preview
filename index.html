@@ -1,5 +1,373 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>סקיצה בהכנה</title>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:Heebo,sans-serif;background:#f6f3ee;color:#2b2622;text-align:center;padding:24px}h1{font-size:32px;margin:0 0 8px}</style></head>
-<body><main><h1>הסקיצה בהכנה 🎨</h1><p>עוד רגע זה יהיה כאן.</p></main><!-- placeholder --></body></html>
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gaya M Social | ניהול סושיאל עם מחשבה מאחורי כל תוכן</title>
+<meta name="description" content="GM social media management: אסטרטגיה, תוכן, עיצוב וקידום ממומן לעסקים באזור המרכז והדרום. תקבעו שיחת היכרות.">
+<meta property="og:title" content="Gaya M Social | ניהול סושיאל עם מחשבה מאחורי כל תוכן">
+<meta property="og:description" content="אסטרטגיה, תוכן, עיצוב וקידום ממומן, כדי שתוכלו להתרכז בעסק. תקבעו שיחת היכרות.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo-dark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F8ECE9;        /* ורוד אבקתי בהיר */
+  --blush:#EFD5D0;     /* ורוד אבקתי */
+  --card:#FFF8F5;      /* קרם-לבן */
+  --ink:#4A2F2C;       /* חום-מוב כהה */
+  --mauve:#6B4540;
+  --soft:#8A6B66;
+  --line:#E3C6C0;
+  --serif:'Frank Ruhl Libre',serif;
+  --sans:'Heebo',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;background:var(--bg);color:var(--ink);line-height:1.75;font-size:17px;-webkit-text-size-adjust:100%}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.2;letter-spacing:-.01em}
+h2{font-size:clamp(30px,6vw,46px);margin-bottom:14px}
+h3{font-size:22px;margin-bottom:6px}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-bottom:14px;font-weight:400}
+.lead{color:var(--mauve);max-width:620px}
+section{padding:76px 0}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(248,236,233,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+header img{height:42px;width:auto}
+nav{display:none;gap:28px;font-size:15px}
+nav a{text-decoration:none;color:var(--mauve)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:var(--card);text-decoration:none;padding:15px 30px;border-radius:999px;font-size:16px;font-weight:400;border:1px solid var(--ink);cursor:pointer;font-family:var(--sans);transition:background .2s,color .2s}
+.btn:hover{background:var(--mauve)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--blush)}
+.btn.small{padding:10px 20px;font-size:14px}
+@media(min-width:760px){nav{display:flex}}
+
+/* hero */
+.hero{padding:70px 0 84px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#FBF3F0 0%,var(--bg) 70%)}
+.hero .logo{width:min(250px,60%);margin:0 auto 34px}
+.hero h1{font-size:clamp(40px,10vw,84px);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--soft)}
+.hero p{max-width:560px;margin:0 auto 34px;color:var(--mauve);font-size:18px}
+.hero .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero .sub{margin-top:22px;font-size:14px;color:var(--soft)}
+
+/* need */
+.need{background:var(--card);text-align:center}
+.need p{max-width:660px;margin:0 auto 14px;color:var(--mauve);font-size:19px}
+.need .quote{font-family:var(--serif);font-size:clamp(24px,4.6vw,34px);color:var(--ink);margin-bottom:22px}
+
+/* services */
+.grid{display:grid;gap:18px;margin-top:38px}
+@media(min-width:680px){.grid.g3{grid-template-columns:repeat(3,1fr)}.grid.g2{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 26px}
+.card .n{font-family:var(--serif);font-size:15px;color:var(--soft);margin-bottom:10px;letter-spacing:.1em}
+.card p{color:var(--mauve);font-size:15.5px}
+.pkg{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 28px}
+.pkg.dark{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.pkg.dark li{color:#F0DAD5}
+.pkg ul{list-style:none;margin-top:16px}
+.pkg li{padding:7px 0;border-top:1px solid rgba(0,0,0,.08);font-size:15.5px;color:var(--mauve)}
+.pkg.dark li{border-top-color:rgba(255,255,255,.14)}
+.pkg li:first-child{border-top:0}
+.note{margin-top:22px;font-size:14.5px;color:var(--soft)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chips span{border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:999px;font-size:14.5px;color:var(--mauve)}
+
+/* why */
+.why{background:var(--blush)}
+.why .lead{color:var(--ink)}
+.why .card{background:rgba(255,248,245,.7);border-color:transparent}
+
+/* results */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px;max-width:640px}
+.ba figure{position:relative}
+.ba img{border-radius:18px;border:1px solid var(--line);width:100%}
+.ba figcaption{position:absolute;top:10px;inset-inline-start:10px;background:var(--ink);color:var(--card);font-size:13px;padding:4px 14px;border-radius:999px}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px}
+.stats b{font-family:var(--serif);font-weight:400;font-size:40px;display:block;line-height:1.1}
+.stats span{font-size:14px;color:var(--soft)}
+
+/* reels */
+.reels{background:var(--card)}
+.reelgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
+.reel{position:relative;border-radius:18px;overflow:hidden;background:var(--blush);aspect-ratio:9/16;cursor:pointer}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel .play{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;transition:opacity .2s}
+.reel .play i{width:52px;height:52px;border-radius:50%;background:rgba(255,248,245,.9);display:grid;place-items:center}
+.reel .play i::after{content:"";border-inline-start:14px solid var(--ink);border-block:9px solid transparent;margin-inline-start:-4px;transform:scaleX(-1)}
+.reel.on .play{opacity:0}
+.center{text-align:center;margin-top:34px}
+
+/* testimonials */
+.t{margin-top:36px;display:grid;gap:18px}
+@media(min-width:760px){.t{grid-template-columns:1fr 1fr}}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 28px}
+.tcard blockquote{font-family:var(--serif);font-size:21px;line-height:1.55;margin-bottom:20px}
+.tcard cite{display:block;font-style:normal;font-size:14px;color:var(--soft);margin-bottom:14px}
+audio{width:100%;height:40px}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:22px 0}
+details:first-of-type{border-top:1px solid var(--line);margin-top:34px}
+summary{cursor:pointer;font-family:var(--serif);font-size:21px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;line-height:1;color:var(--soft)}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--mauve);max-width:700px}
+
+/* cta */
+.cta{background:var(--ink);color:var(--card);text-align:center}
+.cta h2{margin-bottom:12px}
+.cta .lead{color:#E9D2CD;margin:0 auto 30px}
+.cta .btn{background:var(--blush);color:var(--ink);border-color:var(--blush)}
+.cta .btn:hover{background:var(--card)}
+.cta .btn.ghost{background:transparent;color:var(--card);border-color:#9b7771}
+.cta .btn.ghost:hover{background:rgba(255,255,255,.08)}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+form{max-width:440px;margin:42px auto 0;display:grid;gap:12px;text-align:start}
+form .t2{font-family:var(--serif);font-size:22px;text-align:center;margin-bottom:4px}
+input,textarea{width:100%;padding:14px 18px;border-radius:14px;border:1px solid #9b7771;background:rgba(255,255,255,.06);color:var(--card);font-family:var(--sans);font-size:16px}
+input::placeholder,textarea::placeholder{color:#c9aca6}
+input:focus,textarea:focus{outline:2px solid var(--blush);outline-offset:1px}
+form .btn{width:100%}
+
+footer{background:var(--ink);color:#d8bdb7;padding:34px 0 90px;font-size:14px;border-top:1px solid #6b4a45;text-align:center}
+footer img{height:56px;width:auto;margin:0 auto 14px;filter:invert(1) sepia(.2) saturate(.6) brightness(.95)}
+footer a{margin:0 10px}
+
+.float{position:fixed;inset-inline:16px;bottom:14px;z-index:30;display:flex;justify-content:center}
+.float a{box-shadow:0 8px 24px rgba(74,47,44,.25);width:100%;max-width:420px;text-align:center}
+@media(min-width:760px){.float{display:none}footer{padding-bottom:34px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#top"><img src="assets/logo-dark.png" alt="GM social media management"></a>
+    <nav>
+      <a href="#about">מי אני</a>
+      <a href="#services">שירותים</a>
+      <a href="#approach">הגישה</a>
+      <a href="#work">עבודות</a>
+      <a href="#faq">שאלות</a>
+    </nav>
+    <a class="btn small" href="#contact">שיחת היכרות</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <img class="logo" src="assets/logo-dark.png" alt="GM social media management">
+    <h1>שקט בסושיאל.<br><em>תוכן עם מחשבה מאחוריו.</em></h1>
+    <p>אני גאיה, ואני לוקחת על עצמי את הרשתות של העסק שלך: אסטרטגיה, תוכן, עיצוב וקידום ממומן. כדי שתוכלו להתרכז בלקדם את העסק.</p>
+    <div class="actions">
+      <a class="btn" href="#contact">לקבוע שיחת היכרות</a>
+      <a class="btn ghost" href="#work">לראות עבודות</a>
+    </div>
+    <p class="sub">עובדת עם עסקים באזור המרכז והדרום (אזור אשדוד)</p>
+  </div>
+</section>
+
+<section class="need">
+  <div class="wrap">
+    <p class="quote">אתם יודעים שלסושיאל יש חלק משמעותי בצמיחה של העסק.<br>פשוט אין לכם זמן וכוח להתעסק בו.</p>
+    <p>ואולי כבר נפגעתם ממי שלא ידעה מה היא עושה, והרגשתם שזה בזבוז כסף. אצלי כל תוכן נולד מהבנה אמיתית של העסק, של הקהל ושל המטרות, ואתם נשארים מעודכנים בלי לשאת באחריות.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">מי אני</p>
+    <h2>אני לא יוצרת תוכן רק כדי שיהיה מה להעלות</h2>
+    <p class="lead">אני גאיה, שנה וחצי בתחום, ומתייחסת לכל עסק שאני עובדת איתו כאילו הוא העסק שלי. חשוב לי להבין מי עומד מאחוריו, מה המטרות שלו, למי הוא רוצה להגיע ומה באמת יכול לעבוד בשבילו. [ספרי כאן במשפט-שניים על עצמך]</p>
+  </div>
+</section>
+
+<section id="approach" class="why">
+  <div class="wrap">
+    <p class="eyebrow">הגישה</p>
+    <h2>ככה אני עובדת</h2>
+    <div class="grid g3">
+      <div class="card"><div class="n">01</div><h3>מבינה לעומק</h3><p>לפני שמעלים משהו, אני מכירה את העסק, את בעליו ואת הקהל שהוא רוצה להגיע אליו.</p></div>
+      <div class="card"><div class="n">02</div><h3>כל תוכן עם מחשבה</h3><p>שילוב של יצירתיות, אסתטיקה וחשיבה אסטרטגית, כך שהתוכן מתאים לאופי העסק ומשרת את המטרות שלו.</p></div>
+      <div class="card"><div class="n">03</div><h3>מעורבת ומשתפרת</h3><p>מביאה רעיונות חדשים, בודקת מה עובד ומדייקת כל הזמן, בתקשורת פתוחה לאורך הדרך.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">שירותים</p>
+    <h2>הכול במקום אחד</h2>
+    <p class="lead">שתי חבילות חודשיות לניהול מלא של הרשתות, ועוד שירותים לפי הצורך. את המחיר והפרטים נעבור יחד בשיחת ההיכרות.</p>
+    <div class="grid g2">
+      <div class="pkg">
+        <h3>חבילת בסיס</h3>
+        <ul>
+          <li>ניהול עמודים: אינסטגרם, פייסבוק וטיקטוק</li>
+          <li>אסטרטגיית תוכן וגאנט חודשי</li>
+          <li>עיצוב, עריכה וקופי</li>
+          <li>2 תכני Feed בשבוע (פוסט, ריל או קרוסלה)</li>
+          <li>3 פעימות סטורי בשבוע</li>
+          <li>תזמון והעלאה</li>
+          <li>ניהול קידום ממומן</li>
+          <li>ניתוח נתונים חודשי</li>
+          <li>מעקב אחר טרנדים, מתחרים והזדמנויות</li>
+          <li>ניהול היילייטים</li>
+          <li>יום צילום חודשי</li>
+        </ul>
+      </div>
+      <div class="pkg dark">
+        <h3>חבילת פרימיום</h3>
+        <ul>
+          <li>כל מה שבחבילת הבסיס</li>
+          <li>3 תכני Feed בשבוע</li>
+          <li>4 פעימות סטורי בשבוע</li>
+          <li>2 ימי צילום בחודש</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">תקציב הפרסום הממומן עצמו אינו כלול בחבילות.</p>
+
+    <h3 style="margin-top:50px">ימי צילום ויצירת תוכן</h3>
+    <div class="grid g2" style="margin-top:18px">
+      <div class="card"><h3>סשן צילום קצר</h3><p>תכנון קונספטים ורשימת שוטים, וצילום של עד 3 שעות שמסתיים בעד 4 סרטונים ערוכים.</p></div>
+      <div class="card"><h3>יום צילום מורחב</h3><p>עד 5 שעות צילום ועד 6 סרטונים, כולל בניית מאגר תוכן לחודש שלם.</p></div>
+    </div>
+
+    <h3 style="margin-top:50px">ועוד</h3>
+    <div class="chips">
+      <span>ניהול משפיענים</span><span>עיצוב גרפי חד-פעמי</span><span>סרטון או פוסט נוסף</span><span>חבילת סטוריז</span><span>גאנט תוכן בלבד</span><span>עבודה דחופה</span>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="reels">
+  <div class="wrap">
+    <p class="eyebrow">עבודות</p>
+    <h2>קצת ממה שיצרתי</h2>
+    <p class="lead">לחצו על סרטון כדי לצפות.</p>
+    <div class="reelgrid">
+      <div class="reel"><video src="assets/reel-recipe.mp4" poster="assets/reel-recipe.jpg" playsinline muted loop preload="none"></video><div class="play"><i></i></div></div>
+      <div class="reel"><video src="assets/reel-bts.mp4" poster="assets/reel-bts.jpg" playsinline muted loop preload="none"></video><div class="play"><i></i></div></div>
+      <div class="reel"><video src="assets/reel-soap.mp4" poster="assets/reel-soap.jpg" playsinline muted loop preload="none"></video><div class="play"><i></i></div></div>
+    </div>
+    <div class="center"><a class="btn ghost" href="https://www.instagram.com/gayam_social/" target="_blank" rel="noopener">לעוד עבודות באינסטגרם</a></div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <p class="eyebrow">תוצאות</p>
+    <h2>לפני ואחרי: SHAN</h2>
+    <p class="lead">עמוד האינסטגרם של SHAN, סטודיו להשכרת שמלות ערב, ביום שהתחלנו לעבוד יחד ואחרי תקופת העבודה.</p>
+    <div class="stats">
+      <div><b>816</b><span>עוקבים (לפני: 359)</span></div>
+      <div><b>179.2K</b><span>צפיות ב-30 ימים (לפני: 66.3K)</span></div>
+    </div>
+    <div class="ba">
+      <figure><img src="assets/shan-before.jpg" alt="עמוד האינסטגרם של SHAN לפני"><figcaption>לפני</figcaption></figure>
+      <figure><img src="assets/shan-after.jpg" alt="עמוד האינסטגרם של SHAN אחרי"><figcaption>אחרי</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <p class="eyebrow">מה אומרים עליי</p>
+    <h2>בקול של לקוחה</h2>
+    <div class="t">
+      <div class="tcard">
+        <blockquote>"אני סומכת עלייך, אני יודעת שהמותג שלי בידיים טובות. את באה עם המון רצון טוב, באמת אכפת לך, ומנסה לצאת מהקופסה ולעשות משהו מיוחד. אני בטוחה שתצליחי."</blockquote>
+        <cite>לקוחה</cite>
+        <audio controls preload="none" src="assets/rec-1.m4a"></audio>
+      </div>
+      <div class="tcard">
+        <blockquote>"הסתכלתי על הפיד ואיזה שינוי עבר. זה מתחיל לתת את התפוקה והשינוי שרציתי. הרגשתי שאני לא ממש מתחברת לתוצרים שלי, ועכשיו זה נראה פיד יפה ומתוחזק, בסגנון מאוד אחיד ומושקע, ואני מתחילה לאהוב את מה שקורה."</blockquote>
+        <cite>לקוחה</cite>
+        <audio controls preload="none" src="assets/rec-2.m4a"></audio>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">שאלות נפוצות</p>
+    <h2>מה שאנשים שואלים לפני שמתחילים</h2>
+    <details>
+      <summary>תוך כמה זמן רואים תוצאות?</summary>
+      <p>סושיאל הוא תהליך שנבנה לאורך זמן. כבר בהתחלה אפשר לראות שינוי בנראות, בסדר ובעקביות של העמוד, אבל צמיחה בחשיפה, במעורבות ובפניות תלויה בגורמים נוספים ודורשת זמן והתמדה. לרוב זה לוקח לפחות שלושה חודשים.</p>
+    </details>
+    <details>
+      <summary>מה מבדיל אותך ממנהלות סושיאל אחרות?</summary>
+      <p>אני לא מאמינה ביצירת תוכן רק בשביל להעלות משהו לעמוד. אני באמת מתייחסת לכל עסק שאני עובדת איתו כאילו הוא העסק שלי, וחשוב לי להבין מה עומד מאחוריו ולשלב בין יצירתיות, אסתטיקה וחשיבה אסטרטגית בכל תוכן שאני יוצרת.</p>
+    </details>
+    <details>
+      <summary>האם אני צריך להיות מעורב בתהליך?</summary>
+      <p>כן, בעיקר בהתחלה, כדי שאוכל להכיר את העסק כמו שצריך. בהמשך אני דואגת לתכנון וליצירת התוכן, תוך שמירה על תקשורת ושיתוף פעולה כדי לוודא שאנחנו בכיוון הנכון.</p>
+    </details>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#d8bdb7">השלב הבא</p>
+    <h2>בואו נכיר</h2>
+    <p class="lead">שיחת היכרות ואסטרטגיה קצרה: נבין מה העסק צריך ואיך אפשר לעשות לכם שקט בסושיאל. בחרו מה נוח לכם.</p>
+    <div class="ctas">
+      <a class="btn" href="https://wa.me/972544987663?text=%D7%94%D7%99%D7%99%20%D7%92%D7%90%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener">שליחת הודעה בוואטסאפ</a>
+      <a class="btn ghost" href="#" title="[קישור ליומן יתווסף]">קביעת מועד ביומן</a>
+    </div>
+    <form id="lead">
+      <div class="t2">או השאירו פרטים ואחזור אליכם</div>
+      <input name="name" placeholder="שם" required autocomplete="name">
+      <input name="biz" placeholder="שם העסק">
+      <input name="phone" type="tel" placeholder="טלפון" required autocomplete="tel">
+      <button class="btn" type="submit">שליחה</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <img src="assets/logo-dark.png" alt="GM social media management">
+  <p><a href="https://wa.me/972544987663" dir="ltr">054-4987663</a><a href="https://www.instagram.com/gayam_social/" target="_blank" rel="noopener" dir="ltr">@gayam_social</a></p>
+  <p style="margin-top:10px" dir="ltr">© GM social media management</p>
+</footer>
+
+<div class="float"><a class="btn" href="#contact">לקבוע שיחת היכרות</a></div>
+
+<script>
+document.querySelectorAll('.reel').forEach(function(r){
+  var v=r.querySelector('video');
+  r.addEventListener('click',function(){
+    if(v.paused){
+      document.querySelectorAll('.reel video').forEach(function(o){if(o!==v){o.pause();o.parentNode.classList.remove('on')}});
+      v.muted=false;v.play();r.classList.add('on');
+    }else{v.pause();r.classList.remove('on')}
+  });
+});
+document.getElementById('lead').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target;
+  var m='היי גאיה, אשמח לשיחת היכרות.\nשם: '+f.name.value+'\nעסק: '+f.biz.value+'\nטלפון: '+f.phone.value;
+  window.open('https://wa.me/972544987663?text='+encodeURIComponent(m),'_blank');
+});
+</script>
+</body>
+</html>
