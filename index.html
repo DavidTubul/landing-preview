@@ -132,7 +132,7 @@ nav a:hover{color:var(--ink)}
 .slogan{margin:34px auto 0;font-family:'Playfair Display',serif;font-weight:400;letter-spacing:0}
 .slogan span{display:block}
 .slogan .s1{font-family:var(--sans);font-size:clamp(12px,3.2vw,15px);letter-spacing:.42em;text-transform:uppercase;color:var(--soft);padding-inline-start:.42em}
-.slogan .s2{font-style:italic;font-size:clamp(50px,14vw,92px);line-height:1.05;color:var(--ink);margin-top:6px}
+.slogan .s2{font-style:italic;font-size:clamp(38px,10.6vw,84px);line-height:1.1;color:var(--ink);white-space:nowrap}
 .slogan .s3{font-family:'Frank Ruhl Libre',serif;font-size:clamp(18px,4.6vw,23px);color:var(--mauve);margin-top:18px}
 .slogan .s3::before{content:"";display:block;width:56px;height:1px;background:var(--soft);margin:0 auto 16px;opacity:.6}
 .kicker{font-size:13px;letter-spacing:.18em;color:var(--soft);margin-top:30px}
@@ -172,21 +172,58 @@ html[lang=he] .step h3{font-family:var(--sans);font-weight:500;font-size:21px;le
 .card p{color:var(--mauve);font-size:15.5px}
 
 /* packages */
-.pkg{background:var(--card);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(74,47,44,.08)}
-.pkg-hd{background:var(--mauve);color:var(--card);text-align:center;padding:26px 20px 22px}
-.pkg-hd h3{font-size:28px;margin:0}
-.pkg-hd small{display:block;font-size:14px;color:#EAD3CE;margin-top:4px}
-.pkg.top .pkg-hd{background:var(--ink)}
-.badge{display:inline-block;background:var(--blush);color:var(--ink);font-size:12.5px;padding:3px 12px;border-radius:999px;margin-bottom:10px}
-.pkg ul{list-style:none;padding:22px 26px 6px;flex:1}
-.pkg li{position:relative;padding:7px 0;padding-inline-start:22px;font-size:15.5px;color:var(--mauve)}
-.pkg li::before{content:"";position:absolute;inset-inline-start:2px;top:17px;width:7px;height:7px;border-radius:50%;background:var(--soft)}
-.pkg li b{font-weight:500;color:var(--ink)}
-.pkg .pkg-ft{padding:16px 0 26px;border-top:1px solid var(--line);margin:0 26px;text-align:center}
-.pkg .pkg-ft p{font-size:13.5px;color:var(--soft);margin-bottom:16px}
 .note{margin-top:22px;font-size:14.5px;color:var(--soft);text-align:center}
 .box{background:#E8CFCA;border-radius:20px;padding:22px 24px;text-align:center;margin-top:26px;color:var(--ink);font-size:15.5px}
 .box b{font-weight:500}
+
+/* packages comparison */
+.cmp{margin-top:34px;background:var(--card);border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(74,47,44,.08);max-width:860px;margin-inline:auto}
+.cmp-row{display:grid;grid-template-columns:1fr 84px 84px;align-items:center;border-top:1px solid var(--line)}
+.cmp-row>div{padding:12px 10px}
+.cmp-row .f{font-size:15px;color:var(--ink);line-height:1.4;padding-inline-start:16px}
+.cmp-row .f small{display:block;font-size:12.5px;color:var(--soft);margin-top:2px}
+.cmp-row .c{text-align:center;font-size:14px;color:var(--mauve);align-self:stretch;display:grid;place-items:center}
+.cmp-row .c.pr{background:rgba(239,213,208,.45)}
+.cmp-row.diff .f{font-weight:500}
+.cmp-row.diff .c{font-weight:500;color:var(--ink);font-size:14.5px}
+.cmp-row.diff{background:#FBEFEC}
+.cmp-hd{border-top:0}
+.cmp-hd .c{background:var(--mauve);color:var(--card);font-family:var(--serif);font-size:19px;padding:16px 4px}
+.cmp-hd .c.pr{background:var(--ink)}
+.ck{width:20px;height:20px;border-radius:50%;background:var(--mauve);position:relative;display:inline-block}
+.ck::after{content:"";position:absolute;left:7px;top:4px;width:5px;height:9px;border:solid var(--card);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.cmp-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:860px;margin:16px auto 0}
+.cmp-cta .btn{padding:13px 10px;font-size:14.5px}
+@media(min-width:700px){.cmp-row{grid-template-columns:1fr 180px 180px}.cmp-row .f{font-size:16px;padding-inline-start:28px}.cmp-row .c{font-size:15.5px}.cmp-hd .c{font-size:23px}.cmp-cta .btn{font-size:16px}}
+
+/* before/after feeds */
+.feeds-t{margin-top:40px;text-align:center}
+.feeds{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px auto 0;max-width:760px}
+.feeds figure{position:relative}
+.feeds img{border-radius:16px;border:1px solid var(--line);width:100%}
+.feeds .tag{position:absolute;top:10px;inset-inline-start:10px;background:var(--card);color:var(--ink);font-size:13px;padding:3px 14px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.feeds .tag.after{background:var(--ink);color:var(--card)}
+.feeds figcaption{font-size:13.5px;color:var(--mauve);text-align:center;margin-top:8px;line-height:1.5}
+
+/* video lightbox */
+.vbox{position:fixed;inset:0;z-index:60;background:rgba(30,18,16,.92);display:none;align-items:center;justify-content:center;padding:56px 12px 20px}
+.vbox.open{display:flex}
+.vbox video{height:100%;max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);aspect-ratio:9/16;max-width:100%;border-radius:14px;background:#000}
+.vbox .x{position:absolute;top:12px;inset-inline-end:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,248,245,.92);color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
+
+/* mobile menu */
+.burger{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:none;cursor:pointer;color:var(--ink)}
+.burger svg{width:20px;height:20px}
+.drawer-bg{position:fixed;inset:0;z-index:40;background:rgba(30,18,16,.4);opacity:0;pointer-events:none;transition:opacity .25s}
+.drawer{position:fixed;top:0;bottom:0;inset-inline-start:0;z-index:41;width:min(300px,82vw);background:var(--card);padding:22px 26px;transform:translateX(100%);visibility:hidden;transition:transform .25s,visibility .25s;display:flex;flex-direction:column;gap:4px;box-shadow:0 0 40px rgba(0,0,0,.15)}
+html[dir=ltr] .drawer{transform:translateX(-100%)}
+body.menu .drawer{transform:none;visibility:visible}
+body.menu .drawer-bg{opacity:1;pointer-events:auto}
+.drawer img{height:40px;width:auto;margin-bottom:18px}
+.drawer a.l{display:block;padding:11px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:18px}
+.drawer .btn{margin-top:20px;font-size:15px;padding:14px 16px}
+@media(min-width:860px){.burger,.drawer,.drawer-bg{display:none}}
+@media(max-width:859px){header .btn.small .he,header .btn.small .en{display:none!important}header .btn.small{padding:10px;width:42px;height:42px}header .btn.small svg{width:20px;height:20px}}
 
 /* shoots */
 .shoot ul{list-style:none;margin-top:14px}
@@ -209,7 +246,6 @@ html[lang=he] .step h3{font-family:var(--sans);font-weight:500;font-size:21px;le
 .reel .play{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;transition:opacity .2s}
 .reel .play i{width:50px;height:50px;border-radius:50%;background:rgba(255,248,245,.9);display:grid;place-items:center}
 .reel .play i::after{content:"";border-left:14px solid var(--ink);border-block:9px solid transparent;margin-left:4px}
-.reel.on .play{opacity:0}
 .center{text-align:center;margin-top:30px}
 
 /* results */
@@ -224,18 +260,6 @@ html[lang=he] .step h3{font-family:var(--sans);font-weight:500;font-size:21px;le
 .bar{display:grid;grid-template-columns:52px 1fr;align-items:center;gap:10px;font-size:13px;color:var(--soft)}
 .bar div{height:10px;border-radius:99px;background:var(--line)}
 .bar.after div{background:var(--mauve)}
-.changes{margin-top:26px;display:grid;gap:12px}
-@media(min-width:760px){.changes{grid-template-columns:1fr 1fr}}
-.change{background:rgba(255,248,245,.75);border-radius:18px;padding:18px 22px}
-.change b{font-weight:500;display:block;margin-bottom:2px}
-.change span{color:var(--mauve);font-size:15px}
-details.shots{margin-top:22px;text-align:center}
-details.shots summary{cursor:pointer;color:var(--mauve);font-size:15px;text-decoration:underline;list-style:none}
-details.shots summary::-webkit-details-marker{display:none}
-.shotgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:18px auto 0}
-.shotgrid figure{position:relative}
-.shotgrid img{border-radius:14px;border:1px solid var(--line)}
-.shotgrid figcaption{position:absolute;top:8px;inset-inline-start:8px;background:var(--ink);color:var(--card);font-size:12.5px;padding:3px 12px;border-radius:999px}
 
 /* testimonials */
 .t{margin-top:34px;display:grid;gap:18px}
@@ -302,18 +326,34 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
       <a href="#work"><span class="he">עבודות</span><span class="en">Work</span></a>
     </nav>
     <div class="hd-end">
+      <button class="burger" type="button" id="burger" aria-label="תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <button class="lang" type="button" id="lang"><span class="he">EN</span><span class="en">עב</span></button>
       <a class="btn small" data-wa="intro" href="#"><svg><use href="#wa"/></svg><span class="he">וואטסאפ</span><span class="en">WhatsApp</span></a>
     </div>
   </div>
 </header>
 
+<div class="drawer-bg" id="drawer-bg"></div>
+<nav class="drawer" id="drawer" aria-label="menu">
+  <img src="assets/gm-mark.png" alt="" width="843" height="390">
+  <a class="l" href="#about"><span class="he">מי אני</span><span class="en">About</span></a>
+  <a class="l" href="#services"><span class="he">שירותים</span><span class="en">Services</span></a>
+  <a class="l" href="#approach"><span class="he">התהליך</span><span class="en">Process</span></a>
+  <a class="l" href="#packages"><span class="he">חבילות</span><span class="en">Packages</span></a>
+  <a class="l" href="#shoots"><span class="he">ימי צילום</span><span class="en">Shoot days</span></a>
+  <a class="l" href="#extras"><span class="he">שירותים נוספים</span><span class="en">Add-ons</span></a>
+  <a class="l" href="#work"><span class="he">עבודות</span><span class="en">Work</span></a>
+  <a class="l" href="#results"><span class="he">תוצאות</span><span class="en">Results</span></a>
+  <a class="l" href="#faq"><span class="he">שאלות נפוצות</span><span class="en">FAQ</span></a>
+  <a class="btn" data-wa="intro" href="#"><svg><use href="#wa"/></svg><span class="he">לשיחת היכרות בוואטסאפ</span><span class="en">Let's talk on WhatsApp</span></a>
+</nav>
+
 <main id="top">
 
 <section class="hero">
   <div class="wrap">
     <img class="logo" src="assets/logo-dark.png" alt="Gaya M Social, GM social media management" width="843" height="553" fetchpriority="high">
-    <h1 class="slogan"><span class="s1">Make your brand</span><span class="s2">unforgettable</span><span class="s3 he">להפוך את המותג שלך לבלתי נשכח</span></h1>
+    <h1 class="slogan"><span class="s2">Make your brand</span><span class="s2">unforgettable</span><span class="s3 he">להפוך את המותג שלך לבלתי נשכח</span></h1>
     <p class="intro">
       <span class="he">אני עוזרת לעסקים להפוך את הנוכחות שלהם ברשת למותג שאנשים עוצרים בשבילו, באמצעות אסטרטגיה מדויקת, תוכן יצירתי ושפה ויזואלית שמרגישה נכונה לעסק.</span>
       <span class="en">I help businesses turn their online presence into a brand people stop scrolling for, through precise strategy, creative content and a visual language that feels right for the business.</span>
@@ -377,49 +417,25 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
     <p class="eyebrow"><span class="he">חבילות ניהול סושיאל</span><span class="en">Social media packages</span></p>
     <h2><span class="he">ניהול חודשי מלא</span><span class="en">Full monthly management</span></h2>
     <p class="lead"><span class="he">נוכחות מדויקת, תוכן איכותי וניהול שוטף שמתאים לקצב של העסק שלך. את המחיר נעבור יחד בשיחת ההיכרות.</span><span class="en">A precise presence, quality content and ongoing management at your business's pace. We'll go over pricing together in our intro call.</span></p>
-    <div class="grid g2">
-      <div class="pkg">
-        <div class="pkg-hd"><h3><span class="he">חבילת בסיס</span><span class="en">Basic</span></h3><small><span class="he">נוכחות עקבית ומקצועית</span><span class="en">A consistent, professional presence</span></small></div>
-        <ul>
-          <li><span class="he">ניהול עמודים: אינסטגרם, פייסבוק, טיקטוק</span><span class="en">Page management: Instagram, Facebook, TikTok</span></li>
-          <li><span class="he">אסטרטגיית תוכן</span><span class="en">Content strategy</span></li>
-          <li><span class="he">גאנט תוכן כל חודש</span><span class="en">Monthly content calendar</span></li>
-          <li><span class="he">עיצוב, עריכת תוכן וקופי</span><span class="en">Design, editing and copywriting</span></li>
-          <li><span class="he">תזמון והעלאת תכנים</span><span class="en">Scheduling and publishing</span></li>
-          <li><b><span class="he">2 תכנים לפיד בשבוע</span><span class="en">2 feed posts a week</span></b> <span class="he">(פוסט, ריל או קרוסלה)</span><span class="en">(post, reel or carousel)</span></li>
-          <li><b><span class="he">3 פעימות סטורי בשבוע</span><span class="en">3 story drops a week</span></b> <span class="he">(5-7 סטורים בפעימה)</span><span class="en">(5-7 stories each)</span></li>
-          <li><b><span class="he">יום צילום אחד בחודש</span><span class="en">1 shoot day a month</span></b> <span class="he">(עד 4 שעות)</span><span class="en">(up to 4 hours)</span></li>
-          <li><span class="he">ניהול קידום ממומן</span><span class="en">Paid ads management</span></li>
-          <li><span class="he">ניתוח נתונים חודשי</span><span class="en">Monthly analytics</span></li>
-          <li><span class="he">מעקב טרנדים, מתחרים והזדמנויות תוכן</span><span class="en">Tracking trends, competitors and content opportunities</span></li>
-          <li><span class="he">ניהול וסידור שוטף של היילייטים</span><span class="en">Ongoing highlights management</span></li>
-        </ul>
-        <div class="pkg-ft">
-          <p><span class="he">עד 2 סבבי תיקונים לכל פריט תוכן</span><span class="en">Up to 2 revision rounds per content item</span></p>
-          <a class="btn block" data-wa="basic" href="#"><svg><use href="#wa"/></svg><span class="he">לפרטים על חבילת בסיס</span><span class="en">Ask about Basic</span></a>
-        </div>
-      </div>
-      <div class="pkg top">
-        <div class="pkg-hd"><h3><span class="he">חבילת פרימיום</span><span class="en">Premium</span></h3><small><span class="he">יותר תוכן, יותר צילום</span><span class="en">More content, more shooting</span></small></div>
-        <ul>
-          <li><span class="he">ניהול עמודים: אינסטגרם, פייסבוק, טיקטוק</span><span class="en">Page management: Instagram, Facebook, TikTok</span></li>
-          <li><span class="he">אסטרטגיית תוכן</span><span class="en">Content strategy</span></li>
-          <li><span class="he">גאנט תוכן כל חודש</span><span class="en">Monthly content calendar</span></li>
-          <li><span class="he">עיצוב, עריכת תוכן וקופי</span><span class="en">Design, editing and copywriting</span></li>
-          <li><span class="he">תזמון והעלאת תכנים</span><span class="en">Scheduling and publishing</span></li>
-          <li><b><span class="he">3 תכנים לפיד בשבוע</span><span class="en">3 feed posts a week</span></b> <span class="he">(פוסט, ריל או קרוסלה)</span><span class="en">(post, reel or carousel)</span></li>
-          <li><b><span class="he">4 פעימות סטורי בשבוע</span><span class="en">4 story drops a week</span></b> <span class="he">(5-7 סטורים בפעימה)</span><span class="en">(5-7 stories each)</span></li>
-          <li><b><span class="he">2 ימי צילום בחודש</span><span class="en">2 shoot days a month</span></b> <span class="he">(עד 4 שעות כל אחד)</span><span class="en">(up to 4 hours each)</span></li>
-          <li><span class="he">ניהול קידום ממומן</span><span class="en">Paid ads management</span></li>
-          <li><span class="he">ניתוח נתונים חודשי</span><span class="en">Monthly analytics</span></li>
-          <li><span class="he">מעקב טרנדים, מתחרים והזדמנויות תוכן</span><span class="en">Tracking trends, competitors and content opportunities</span></li>
-          <li><span class="he">ניהול וסידור שוטף של היילייטים</span><span class="en">Ongoing highlights management</span></li>
-        </ul>
-        <div class="pkg-ft">
-          <p><span class="he">עד 2 סבבי תיקונים לכל פריט תוכן</span><span class="en">Up to 2 revision rounds per content item</span></p>
-          <a class="btn block" data-wa="premium" href="#"><svg><use href="#wa"/></svg><span class="he">לפרטים על חבילת פרימיום</span><span class="en">Ask about Premium</span></a>
-        </div>
-      </div>
+    <div class="cmp">
+      <div class="cmp-row cmp-hd"><div class="f"></div><div class="c"><span class="he">בסיס</span><span class="en">Basic</span></div><div class="c pr"><span class="he">פרימיום</span><span class="en">Premium</span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">ניהול עמודים</span><span class="en">Page management</span><small><span class="he">אינסטגרם, פייסבוק, טיקטוק</span><span class="en">Instagram, Facebook, TikTok</span></small></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">אסטרטגיית תוכן</span><span class="en">Content strategy</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">גאנט תוכן חודשי</span><span class="en">Monthly content calendar</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">עיצוב, עריכת תוכן וקופי</span><span class="en">Design, editing &amp; copy</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">תזמון והעלאת תכנים</span><span class="en">Scheduling &amp; publishing</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row diff"><div class="f"><span class="he">תכנים לפיד</span><span class="en">Feed posts</span><small><span class="he">פוסט, ריל או קרוסלה</span><span class="en">post, reel or carousel</span></small></div><div class="c"><span class="he">2 בשבוע</span><span class="en">2 / week</span></div><div class="c pr"><span class="he">3 בשבוע</span><span class="en">3 / week</span></div></div>
+      <div class="cmp-row diff"><div class="f"><span class="he">פעימות סטורי</span><span class="en">Story drops</span><small><span class="he">5-7 סטורים בפעימה</span><span class="en">5-7 stories each</span></small></div><div class="c"><span class="he">3 בשבוע</span><span class="en">3 / week</span></div><div class="c pr"><span class="he">4 בשבוע</span><span class="en">4 / week</span></div></div>
+      <div class="cmp-row diff"><div class="f"><span class="he">ימי צילום</span><span class="en">Shoot days</span><small><span class="he">עד 4 שעות כל יום</span><span class="en">up to 4 hours each</span></small></div><div class="c"><span class="he">1 בחודש</span><span class="en">1 / month</span></div><div class="c pr"><span class="he">2 בחודש</span><span class="en">2 / month</span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">ניהול קידום ממומן</span><span class="en">Paid ads management</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">ניתוח נתונים חודשי</span><span class="en">Monthly analytics</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">מעקב טרנדים, מתחרים והזדמנויות</span><span class="en">Trends, competitors &amp; opportunities</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">ניהול היילייטים</span><span class="en">Highlights management</span></div><div class="c"><span class="ck" aria-label="✓"></span></div><div class="c pr"><span class="ck" aria-label="✓"></span></div></div>
+      <div class="cmp-row"><div class="f"><span class="he">סבבי תיקונים לכל פריט</span><span class="en">Revision rounds per item</span></div><div class="c"><span class="he">עד 2</span><span class="en">up to 2</span></div><div class="c pr"><span class="he">עד 2</span><span class="en">up to 2</span></div></div>
+    </div>
+    <div class="cmp-cta">
+      <a class="btn" data-wa="basic" href="#"><svg><use href="#wa"/></svg><span class="he">לפרטים על בסיס</span><span class="en">Ask about Basic</span></a>
+      <a class="btn" data-wa="premium" href="#"><svg><use href="#wa"/></svg><span class="he">לפרטים על פרימיום</span><span class="en">Ask about Premium</span></a>
     </div>
     <p class="note"><span class="he">* תקציב הפרסום הממומן אינו כלול בחבילות ומשולם בנפרד.</span><span class="en">* The paid ads budget itself is not included and is paid separately.</span></p>
     <div class="box"><b><span class="he">החבילות נבנות כדי לתת לעסק נוכחות עקבית ומקצועית,</span><span class="en">The packages are built to give your business a consistent, professional presence,</span></b><br><span class="he">תוך שמירה על שפה ויזואלית אחידה, תכנון מראש וקריאייטיב שמרגיש נכון למותג.</span><span class="en">with a unified visual language, advance planning and creative that feels right for the brand.</span></div>
@@ -429,7 +445,6 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
 <section id="shoots" class="alt">
   <div class="wrap">
     <p class="eyebrow"><span class="he">ימי צילום ויצירת תוכן</span><span class="en">Shoot days &amp; content creation</span></p>
-    <h2><span class="he">צילום שהופך לתוכן לחודש</span><span class="en">One shoot, a month of content</span></h2>
     <p class="lead"><span class="he">אפשר להוסיף צילום חודשי לחבילה, או להזמין סשן חד-פעמי.</span><span class="en">Add a monthly shoot to your package, or book a one-time session.</span></p>
     <div class="grid g2">
       <div class="card shoot">
@@ -525,21 +540,11 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
         <div class="k" style="margin-top:8px"><span class="he">לפני: 46</span><span class="en">Before: 46</span></div>
       </div>
     </div>
-    <div class="changes">
-      <div class="change"><b><span class="he">היילייטים שמספרים סיפור</span><span class="en">Highlights that tell a story</span></b><span><span class="he">במקום עיגולים עם אות, כיסויים מצולמים בשפה אחידה: אודות, עיצוב, שמלות שחורות, Shan girls.</span><span class="en">Instead of plain letter circles, photo covers in one visual language: About, Design, Black dresses, Shan girls.</span></span></div>
-      <div class="change"><b><span class="he">פיד אחיד ומושקע</span><span class="en">A consistent, polished feed</span></b><span><span class="he">תוכן קבוע, צילומים בסגנון אחד ורילס שמראים את השמלות בתנועה.</span><span class="en">Regular content, a single photographic style and reels that show the dresses in motion.</span></span></div>
+    <h3 class="feeds-t"><span class="he">ככה נראה הפיד</span><span class="en">How the feed looks</span></h3>
+    <div class="feeds">
+      <figure><span class="tag"><span class="he">לפני</span><span class="en">Before</span></span><img src="assets/feed-before.jpg" alt="הפיד של SHAN לפני" width="720" height="964"><figcaption><span class="he">גוונים כהים וסגנונות שונים מפוסט לפוסט</span><span class="en">Dark tones and a different style in every post</span></figcaption></figure>
+      <figure><span class="tag after"><span class="he">אחרי</span><span class="en">After</span></span><img src="assets/feed-after.jpg" alt="הפיד של SHAN אחרי" width="720" height="964"><figcaption><span class="he">פיד בהיר, חם ואחיד, עם רילס מהסטודיו ומהאירועים</span><span class="en">A light, warm, consistent feed with reels from the studio and events</span></figcaption></figure>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px auto 0;max-width:640px">
-      <figure style="position:relative;margin:0"><img src="assets/shan-feed-before.jpg" alt="SHAN feed before" style="width:100%;border-radius:18px;border:1px solid var(--line);display:block"><figcaption style="position:absolute;top:10px;inset-inline-start:10px;background:#4A2F2C;color:#fff8f5;font-size:13px;padding:4px 14px;border-radius:999px"><span class="he">הפיד לפני</span><span class="en">Feed before</span></figcaption></figure>
-      <figure style="position:relative;margin:0"><img src="assets/shan-feed-after.jpg" alt="SHAN feed after" style="width:100%;border-radius:18px;border:1px solid var(--line);display:block"><figcaption style="position:absolute;top:10px;inset-inline-start:10px;background:#4A2F2C;color:#fff8f5;font-size:13px;padding:4px 14px;border-radius:999px"><span class="he">הפיד אחרי</span><span class="en">Feed after</span></figcaption></figure>
-    </div>
-    <details class="shots">
-      <summary><span class="he">לצילומי המסך המקוריים</span><span class="en">View the original screenshots</span></summary>
-      <div class="shotgrid">
-        <figure><img src="assets/shan-before.jpg" alt="SHAN before" loading="lazy"><figcaption><span class="he">לפני</span><span class="en">Before</span></figcaption></figure>
-        <figure><img src="assets/shan-after.jpg" alt="SHAN after" loading="lazy"><figcaption><span class="he">אחרי</span><span class="en">After</span></figcaption></figure>
-      </div>
-    </details>
   </div>
 </section>
 
@@ -610,6 +615,8 @@ footer .copy{margin-top:16px;font-size:12.5px;opacity:.7}
   <p class="copy" dir="ltr">© Gaya M Social</p>
 </footer>
 
+<div class="vbox" id="vbox" role="dialog" aria-modal="true"><button class="x" type="button" id="vclose" aria-label="סגירה">×</button><video id="vplayer" controls playsinline></video></div>
+
 <div class="float"><a class="btn" data-wa="intro" href="#"><svg><use href="#wa"/></svg><span class="he">לשיחת היכרות בוואטסאפ</span><span class="en">Let's talk on WhatsApp</span></a></div>
 
 <script>
@@ -632,15 +639,18 @@ try{saved=localStorage.getItem('lang')}catch(e){}
 setLang(q==='en'||q==='he'?q:(saved||'he'));
 document.getElementById('lang').addEventListener('click',function(){setLang(document.documentElement.lang==='he'?'en':'he')});
 
-document.querySelectorAll('.reel').forEach(function(r){
-  var v=r.querySelector('video');
-  r.addEventListener('click',function(){
-    if(v.paused){
-      document.querySelectorAll('.reel video').forEach(function(o){if(o!==v){o.pause();o.parentNode.classList.remove('on')}});
-      v.muted=false;v.volume=1;v.play();r.classList.add('on');
-    }else{v.pause();r.classList.remove('on')}
-  });
-});
+var vbox=document.getElementById('vbox'),vp=document.getElementById('vplayer');
+function vopen(src){vp.src=src;vbox.classList.add('open');document.body.style.overflow='hidden';vp.currentTime=0;vp.muted=false;vp.play();history.pushState({v:1},'')}
+function vshut(){if(!vbox.classList.contains('open'))return;vp.pause();vp.removeAttribute('src');vp.load();vbox.classList.remove('open');document.body.style.overflow=''}
+document.querySelectorAll('.reel').forEach(function(r){r.addEventListener('click',function(){vopen(r.querySelector('video').getAttribute('src'))})});
+document.getElementById('vclose').addEventListener('click',function(){history.state&&history.state.v?history.back():vshut()});
+vbox.addEventListener('click',function(e){if(e.target===vbox)document.getElementById('vclose').click()});
+addEventListener('popstate',vshut);
+addEventListener('keydown',function(e){if(e.key==='Escape'){if(vbox.classList.contains('open'))document.getElementById('vclose').click();document.body.classList.remove('menu')}});
+
+document.getElementById('burger').addEventListener('click',function(){document.body.classList.add('menu')});
+document.getElementById('drawer-bg').addEventListener('click',function(){document.body.classList.remove('menu')});
+document.querySelectorAll('#drawer a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu')})});
 </script>
 </body>
 </html>
